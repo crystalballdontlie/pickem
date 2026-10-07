@@ -1,0 +1,93 @@
+name: Nightly standings update
+
+on:
+  schedule:
+    # GitHub schedules run in UTC. These two times cover midnight Pacific in
+    # both daylight time (07:15 UTC = 12:15 AM PDT) and standard time
+    # (08:15 UTC = 12:15 AM PST). The "when" step below skips whichever one
+    # isn't the midnight hour in Los Angeles.
+    - cron: "15 7 * * *"
+    - cron: "15 8 * * *"
+  push:
+    branches: [main]
+    paths: ["picks.csv", "lines.csv", "config.json", "site/**", "scripts/**"]
+  workflow_dispatch:
+    inputs:
+      season:
+        description: "Test: season start year (e.g. 2025 for last season). Leave blank for the live season."
+        required: false
+      through:
+        description: "Test: only count games on or before this date, YYYY-MM-DD. Leave blank for all games."
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: standings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: When
+        id: when
+        run: |
+          hour=$(TZ=America/Los_Angeles date +%H)
+          echo "Local LA time: $(TZ=America/Los_Angeles date)"
+          # GitHub can start scheduled runs late, so accept anything from
+          # midnight to 2:59 AM Pacific; manual and push runs always go.
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$hour" -lt 3 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not the midnight run for this time of year; skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.when.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.when.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Pull results and score picks
+        if: steps.when.outputs.run == 'true'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+          PICKS_CSV_URL: ${{ secrets.PICKS_CSV_URL }}
+          SEASON: ${{ github.event.inputs.season }}
+          THROUGH: ${{ github.event.inputs.through }}
+        run: |
+          args=()
+          [ -n "$SEASON" ] && args+=(--season "$SEASON")
+          [ -n "$THROUGH" ] && args+=(--through "$THROUGH")
+          python scripts/update.py "${args[@]}"
+
+      - name: Save tonight's data to the repo
+        if: steps.when.outputs.run == 'true'
+        run: |
+          git config user.name "standings-bot"
+          git config user.email "standings-bot@users.noreply.github.com"
+          git add site/data/pool.json
+          git diff --cached --quiet || git commit -m "Standings update $(TZ=America/Los_Angeles date +%Y-%m-%d)"
+          git push
+
+      - uses: actions/configure-pages@v5
+        if: steps.when.outputs.run == 'true'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.when.outputs.run == 'true'
+        with:
+          path: site
+
+      - id: deploy
+        if: steps.when.outputs.run == 'true'
+        uses: actions/deploy-pages@v4
