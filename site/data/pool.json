@@ -4,12 +4,113 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-09-30T15:33:10+00:00",
+ "generated_at": "2026-10-07T18:09:21+00:00",
  "last_game_date": null,
  "games_played_total": 0,
  "check": {
-  "status": "unavailable",
-  "mismatches": []
+  "status": "mismatch",
+  "mismatches": [
+   {
+    "team": "ATL",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "BKN",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "CHA",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "DEN",
+    "balldontlie": "0-0",
+    "espn": "1-1"
+   },
+   {
+    "team": "DET",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "GSW",
+    "balldontlie": "0-0",
+    "espn": "1-1"
+   },
+   {
+    "team": "LAC",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "LAL",
+    "balldontlie": "0-0",
+    "espn": "1-1"
+   },
+   {
+    "team": "MEM",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "MIA",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "MIL",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "MIN",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "NOP",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "NYK",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "OKC",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "PHI",
+    "balldontlie": "0-0",
+    "espn": "1-0"
+   },
+   {
+    "team": "PHX",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "SAC",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "TOR",
+    "balldontlie": "0-0",
+    "espn": "0-1"
+   },
+   {
+    "team": "UTA",
+    "balldontlie": "0-0",
+    "espn": "1-1"
+   }
+  ]
  },
  "teams": [
   {
@@ -463,5 +564,8 @@
    "picked_under": 0
   }
  ],
- "players": []
+ "players": [],
+ "test_note": null,
+ "picks_source": "0 entries from picks.csv",
+ "warnings": []
 }
