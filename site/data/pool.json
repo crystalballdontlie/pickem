@@ -4,7 +4,7 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-16T04:22:13+00:00",
+ "generated_at": "2026-10-16T04:43:25+00:00",
  "last_game_date": null,
  "games_played_total": 0,
  "check": {
@@ -620,129 +620,161 @@
    "picks": {
     "ATL": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "BOS": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "BKN": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "CHA": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "CHI": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "CLE": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "DAL": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "DEN": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "DET": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "GSW": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "HOU": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "IND": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "LAC": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "LAL": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "MEM": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "MIA": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "MIL": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "MIN": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "NOP": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "NYK": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "OKC": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "ORL": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "PHI": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "PHX": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "POR": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "SAC": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "SAS": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "TOR": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "UTA": {
      "pick": "over",
-     "state": "even"
+     "state": "even",
+     "lock": false
     },
     "WAS": {
      "pick": "under",
-     "state": "even"
+     "state": "even",
+     "lock": false
     }
    },
+   "locks": [],
    "won": 0,
    "lost": 0,
    "pushes": 0,
    "on_pace": 0,
+   "points": 0,
    "projected": 0,
    "rank": 1
   }
