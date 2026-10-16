@@ -1,785 +1,877 @@
 {
  "pool_name": "NBA Over/Under Pool",
  "demo": false,
- "season": 2026,
- "season_label": "2026-27",
+ "season": 2025,
+ "season_label": "2025-26",
  "games_per_team": 82,
- "generated_at": "2026-10-16T04:43:25+00:00",
- "last_game_date": null,
- "games_played_total": 0,
+ "generated_at": "2026-10-16T05:07:28+00:00",
+ "last_game_date": "2026-04-12",
+ "games_played_total": 1230,
  "check": {
-  "status": "mismatch",
-  "mismatches": [
-   {
-    "team": "ATL",
-    "balldontlie": "0-0",
-    "espn": "3-1"
-   },
-   {
-    "team": "BKN",
-    "balldontlie": "0-0",
-    "espn": "3-1"
-   },
-   {
-    "team": "BOS",
-    "balldontlie": "0-0",
-    "espn": "3-0"
-   },
-   {
-    "team": "CHA",
-    "balldontlie": "0-0",
-    "espn": "1-2"
-   },
-   {
-    "team": "CHI",
-    "balldontlie": "0-0",
-    "espn": "2-2"
-   },
-   {
-    "team": "CLE",
-    "balldontlie": "0-0",
-    "espn": "1-2"
-   },
-   {
-    "team": "DAL",
-    "balldontlie": "0-0",
-    "espn": "1-2"
-   },
-   {
-    "team": "DEN",
-    "balldontlie": "0-0",
-    "espn": "2-2"
-   },
-   {
-    "team": "DET",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "GSW",
-    "balldontlie": "0-0",
-    "espn": "3-2"
-   },
-   {
-    "team": "HOU",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "IND",
-    "balldontlie": "0-0",
-    "espn": "1-2"
-   },
-   {
-    "team": "LAC",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "LAL",
-    "balldontlie": "0-0",
-    "espn": "2-2"
-   },
-   {
-    "team": "MEM",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "MIA",
-    "balldontlie": "0-0",
-    "espn": "3-1"
-   },
-   {
-    "team": "MIL",
-    "balldontlie": "0-0",
-    "espn": "1-3"
-   },
-   {
-    "team": "MIN",
-    "balldontlie": "0-0",
-    "espn": "3-2"
-   },
-   {
-    "team": "NOP",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "NYK",
-    "balldontlie": "0-0",
-    "espn": "1-4"
-   },
-   {
-    "team": "OKC",
-    "balldontlie": "0-0",
-    "espn": "1-4"
-   },
-   {
-    "team": "ORL",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "PHI",
-    "balldontlie": "0-0",
-    "espn": "1-2"
-   },
-   {
-    "team": "PHX",
-    "balldontlie": "0-0",
-    "espn": "1-3"
-   },
-   {
-    "team": "POR",
-    "balldontlie": "0-0",
-    "espn": "3-0"
-   },
-   {
-    "team": "SAC",
-    "balldontlie": "0-0",
-    "espn": "0-4"
-   },
-   {
-    "team": "SAS",
-    "balldontlie": "0-0",
-    "espn": "1-3"
-   },
-   {
-    "team": "TOR",
-    "balldontlie": "0-0",
-    "espn": "2-2"
-   },
-   {
-    "team": "UTA",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   },
-   {
-    "team": "WAS",
-    "balldontlie": "0-0",
-    "espn": "2-1"
-   }
-  ]
+  "status": "match",
+  "mismatches": []
  },
  "teams": [
-  {
-   "abbr": "ATL",
-   "name": "Atlanta Hawks",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 43.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "BKN",
-   "name": "Brooklyn Nets",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 24.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "BOS",
-   "name": "Boston Celtics",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 51.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "CHA",
-   "name": "Charlotte Hornets",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 38.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "CHI",
-   "name": "Chicago Bulls",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 29.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "CLE",
-   "name": "Cleveland Cavaliers",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 47.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "DAL",
-   "name": "Dallas Mavericks",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 33.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "DEN",
-   "name": "Denver Nuggets",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 48.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "DET",
-   "name": "Detroit Pistons",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 48.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "GSW",
-   "name": "Golden State Warriors",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 37.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "HOU",
-   "name": "Houston Rockets",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 47.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "IND",
-   "name": "Indiana Pacers",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 44.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "LAC",
-   "name": "LA Clippers",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 28.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "LAL",
-   "name": "Los Angeles Lakers",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 45.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "MEM",
-   "name": "Memphis Grizzlies",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 29.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "MIA",
-   "name": "Miami Heat",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 45.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "MIL",
-   "name": "Milwaukee Bucks",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 25.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "MIN",
-   "name": "Minnesota Timberwolves",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 48.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "NOP",
-   "name": "New Orleans Pelicans",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 28.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "NYK",
-   "name": "New York Knicks",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 52.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
   {
    "abbr": "OKC",
    "name": "Oklahoma City Thunder",
    "conf": "West",
-   "w": 0,
-   "l": 0,
+   "w": 64,
+   "l": 18,
    "line": 62.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 64.0,
+   "result": "over",
+   "lean": "over",
    "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "ORL",
-   "name": "Orlando Magic",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 43.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "PHI",
-   "name": "Philadelphia 76ers",
-   "conf": "East",
-   "w": 0,
-   "l": 0,
-   "line": 50.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "PHX",
-   "name": "Phoenix Suns",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 39.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
-   "picked_under": 1
-  },
-  {
-   "abbr": "POR",
-   "name": "Portland Trail Blazers",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 40.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 1,
-   "picked_under": 0
-  },
-  {
-   "abbr": "SAC",
-   "name": "Sacramento Kings",
-   "conf": "West",
-   "w": 0,
-   "l": 0,
-   "line": 20.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
    "picked_under": 1
   },
   {
    "abbr": "SAS",
    "name": "San Antonio Spurs",
    "conf": "West",
-   "w": 0,
-   "l": 0,
+   "w": 62,
+   "l": 20,
    "line": 60.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 62.0,
+   "result": "over",
+   "lean": "over",
    "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "DET",
+   "name": "Detroit Pistons",
+   "conf": "East",
+   "w": 60,
+   "l": 22,
+   "line": 48.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 60.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "BOS",
+   "name": "Boston Celtics",
+   "conf": "East",
+   "w": 56,
+   "l": 26,
+   "line": 51.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 56.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "DEN",
+   "name": "Denver Nuggets",
+   "conf": "West",
+   "w": 54,
+   "l": 28,
+   "line": 48.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 54.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
    "picked_under": 0
+  },
+  {
+   "abbr": "LAL",
+   "name": "Los Angeles Lakers",
+   "conf": "West",
+   "w": 53,
+   "l": 29,
+   "line": 45.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 53.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "NYK",
+   "name": "New York Knicks",
+   "conf": "East",
+   "w": 53,
+   "l": 29,
+   "line": 52.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 53.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "CLE",
+   "name": "Cleveland Cavaliers",
+   "conf": "East",
+   "w": 52,
+   "l": 30,
+   "line": 47.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 52.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "HOU",
+   "name": "Houston Rockets",
+   "conf": "West",
+   "w": 52,
+   "l": 30,
+   "line": 47.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 52.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "MIN",
+   "name": "Minnesota Timberwolves",
+   "conf": "West",
+   "w": 49,
+   "l": 33,
+   "line": 48.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 49.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "ATL",
+   "name": "Atlanta Hawks",
+   "conf": "East",
+   "w": 46,
+   "l": 36,
+   "line": 43.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 46.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
   },
   {
    "abbr": "TOR",
    "name": "Toronto Raptors",
    "conf": "East",
-   "w": 0,
-   "l": 0,
+   "w": 46,
+   "l": 36,
    "line": 46.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 46.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "ORL",
+   "name": "Orlando Magic",
+   "conf": "East",
+   "w": 45,
+   "l": 37,
+   "line": 43.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 45.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "PHI",
+   "name": "Philadelphia 76ers",
+   "conf": "East",
+   "w": 45,
+   "l": 37,
+   "line": 50.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 45.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "PHX",
+   "name": "Phoenix Suns",
+   "conf": "West",
+   "w": 45,
+   "l": 37,
+   "line": 39.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 45.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "CHA",
+   "name": "Charlotte Hornets",
+   "conf": "East",
+   "w": 44,
+   "l": 38,
+   "line": 38.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 44.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "MIA",
+   "name": "Miami Heat",
+   "conf": "East",
+   "w": 43,
+   "l": 39,
+   "line": 45.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 43.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "LAC",
+   "name": "LA Clippers",
+   "conf": "West",
+   "w": 42,
+   "l": 40,
+   "line": 28.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 42.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "POR",
+   "name": "Portland Trail Blazers",
+   "conf": "West",
+   "w": 42,
+   "l": 40,
+   "line": 40.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 42.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "GSW",
+   "name": "Golden State Warriors",
+   "conf": "West",
+   "w": 37,
+   "l": 45,
+   "line": 37.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 37.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "MIL",
+   "name": "Milwaukee Bucks",
+   "conf": "East",
+   "w": 32,
+   "l": 50,
+   "line": 25.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 32.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "CHI",
+   "name": "Chicago Bulls",
+   "conf": "East",
+   "w": 31,
+   "l": 51,
+   "line": 29.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 31.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "DAL",
+   "name": "Dallas Mavericks",
+   "conf": "West",
+   "w": 26,
+   "l": 56,
+   "line": 33.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 26.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "NOP",
+   "name": "New Orleans Pelicans",
+   "conf": "West",
+   "w": 26,
+   "l": 56,
+   "line": 28.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 26.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "MEM",
+   "name": "Memphis Grizzlies",
+   "conf": "West",
+   "w": 25,
+   "l": 57,
+   "line": 29.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 25.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "SAC",
+   "name": "Sacramento Kings",
+   "conf": "West",
+   "w": 22,
+   "l": 60,
+   "line": 20.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 22.0,
+   "result": "over",
+   "lean": "over",
+   "picked_over": 1,
    "picked_under": 1
   },
   {
    "abbr": "UTA",
    "name": "Utah Jazz",
    "conf": "West",
-   "w": 0,
-   "l": 0,
+   "w": 22,
+   "l": 60,
    "line": 36.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 22.0,
+   "result": "under",
+   "lean": "under",
    "picked_over": 1,
+   "picked_under": 1
+  },
+  {
+   "abbr": "BKN",
+   "name": "Brooklyn Nets",
+   "conf": "East",
+   "w": 20,
+   "l": 62,
+   "line": 24.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 20.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 2,
+   "picked_under": 0
+  },
+  {
+   "abbr": "IND",
+   "name": "Indiana Pacers",
+   "conf": "East",
+   "w": 19,
+   "l": 63,
+   "line": 44.5,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 19.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 2,
    "picked_under": 0
   },
   {
    "abbr": "WAS",
    "name": "Washington Wizards",
    "conf": "East",
-   "w": 0,
-   "l": 0,
+   "w": 17,
+   "l": 65,
    "line": 34.5,
-   "gp": 0,
-   "remaining": 82,
-   "proj": null,
-   "result": null,
-   "lean": null,
-   "picked_over": 0,
+   "gp": 82,
+   "remaining": 0,
+   "proj": 17.0,
+   "result": "under",
+   "lean": "under",
+   "picked_over": 1,
    "picked_under": 1
   }
  ],
  "players": [
   {
-   "name": "Example Person",
+   "name": "Test A",
    "picks": {
     "ATL": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "BOS": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "BKN": {
      "pick": "over",
-     "state": "even",
-     "lock": false
+     "state": "lost",
+     "lock": true
     },
     "CHA": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "CHI": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "CLE": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "DAL": {
      "pick": "over",
-     "state": "even",
-     "lock": false
+     "state": "lost",
+     "lock": true
     },
     "DEN": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "DET": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "GSW": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "lost",
      "lock": false
     },
     "HOU": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "IND": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "lost",
      "lock": false
     },
     "LAC": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "LAL": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "MEM": {
      "pick": "over",
-     "state": "even",
+     "state": "lost",
      "lock": false
     },
     "MIA": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "lost",
      "lock": false
     },
     "MIL": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "MIN": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "NOP": {
      "pick": "over",
-     "state": "even",
+     "state": "lost",
      "lock": false
     },
     "NYK": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "OKC": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "ORL": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "PHI": {
      "pick": "over",
-     "state": "even",
+     "state": "lost",
      "lock": false
     },
     "PHX": {
-     "pick": "under",
-     "state": "even",
+     "pick": "over",
+     "state": "won",
      "lock": false
     },
     "POR": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
+     "lock": false
+    },
+    "SAC": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "SAS": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "TOR": {
+     "pick": "over",
+     "state": "lost",
+     "lock": true
+    },
+    "UTA": {
+     "pick": "over",
+     "state": "lost",
+     "lock": false
+    },
+    "WAS": {
+     "pick": "over",
+     "state": "lost",
+     "lock": false
+    }
+   },
+   "locks": [
+    "BKN",
+    "DAL",
+    "TOR"
+   ],
+   "won": 18,
+   "lost": 12,
+   "pushes": 0,
+   "on_pace": 0,
+   "points": 18,
+   "projected": 18,
+   "rank": 1
+  },
+  {
+   "name": "Test B",
+   "picks": {
+    "ATL": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "BOS": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "BKN": {
+     "pick": "over",
+     "state": "lost",
+     "lock": false
+    },
+    "CHA": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "CHI": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "CLE": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "DAL": {
+     "pick": "under",
+     "state": "won",
+     "lock": false
+    },
+    "DEN": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "DET": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "GSW": {
+     "pick": "over",
+     "state": "lost",
+     "lock": true
+    },
+    "HOU": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "IND": {
+     "pick": "over",
+     "state": "lost",
+     "lock": true
+    },
+    "LAC": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "LAL": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "MEM": {
+     "pick": "over",
+     "state": "lost",
+     "lock": false
+    },
+    "MIA": {
+     "pick": "under",
+     "state": "won",
+     "lock": false
+    },
+    "MIL": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "MIN": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "NOP": {
+     "pick": "under",
+     "state": "won",
+     "lock": false
+    },
+    "NYK": {
+     "pick": "over",
+     "state": "won",
+     "lock": true
+    },
+    "OKC": {
+     "pick": "under",
+     "state": "lost",
+     "lock": false
+    },
+    "ORL": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "PHI": {
+     "pick": "under",
+     "state": "won",
+     "lock": false
+    },
+    "PHX": {
+     "pick": "over",
+     "state": "won",
+     "lock": false
+    },
+    "POR": {
+     "pick": "under",
+     "state": "lost",
      "lock": false
     },
     "SAC": {
      "pick": "under",
-     "state": "even",
+     "state": "lost",
      "lock": false
     },
     "SAS": {
      "pick": "over",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "TOR": {
      "pick": "under",
-     "state": "even",
+     "state": "won",
      "lock": false
     },
     "UTA": {
-     "pick": "over",
-     "state": "even",
+     "pick": "under",
+     "state": "won",
      "lock": false
     },
     "WAS": {
      "pick": "under",
-     "state": "even",
+     "state": "won",
      "lock": false
     }
    },
-   "locks": [],
-   "won": 0,
-   "lost": 0,
+   "locks": [
+    "GSW",
+    "IND",
+    "NYK"
+   ],
+   "won": 14,
+   "lost": 16,
    "pushes": 0,
    "on_pace": 0,
-   "points": 0,
-   "projected": 0,
-   "rank": 1
+   "points": 15,
+   "projected": 15,
+   "rank": 2
   }
  ],
- "test_note": null,
- "picks_source": "1 entries from picks.csv",
- "warnings": []
+ "test_note": "2025-26 season",
+ "picks_source": "2 entries from the Google Form (1 earlier resubmissions replaced)",
+ "warnings": [],
+ "side_bets": [
+  {
+   "number": 1,
+   "title": "Slowest Winner",
+   "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
+   "automatic": true,
+   "final": true,
+   "summary": "Brooklyn Nets: first win came in game 8.",
+   "result": "Brooklyn Nets",
+   "entrants": 0,
+   "pot": 0,
+   "winners": [],
+   "share": null,
+   "groups": []
+  },
+  {
+   "number": 2,
+   "title": "Out the Gate Excellence",
+   "question": "Who will be the first team to 20 wins?",
+   "automatic": true,
+   "final": true,
+   "summary": "Oklahoma City Thunder reached 20 wins first (2025-11-30).",
+   "result": "Oklahoma City Thunder",
+   "entrants": 0,
+   "pot": 0,
+   "winners": [],
+   "share": null,
+   "groups": []
+  },
+  {
+   "number": 3,
+   "title": "Tom Thibodeau Memorial Tired Legs Award",
+   "question": "What team will have the player with the highest minutes played per game?",
+   "automatic": false,
+   "final": false,
+   "summary": "Result to be posted by the commissioner.",
+   "result": null,
+   "entrants": 0,
+   "pot": 0,
+   "winners": [],
+   "share": null,
+   "groups": []
+  },
+  {
+   "number": 4,
+   "title": "Mike Brown 2012 Coaching Alacrity Award",
+   "question": "In honor of Mike Brown being fired 5 games into the 2012 season, what NBA team will be the first to fire* its coach?",
+   "automatic": false,
+   "final": false,
+   "summary": "Result to be posted by the commissioner.",
+   "result": null,
+   "entrants": 0,
+   "pot": 0,
+   "winners": [],
+   "share": null,
+   "groups": []
+  },
+  {
+   "number": 5,
+   "title": "Board Man Gets Paid",
+   "question": "What player will grab the most rebounds (defensive + offensive) over the course of the 2026-2027 NBA season?",
+   "automatic": false,
+   "final": false,
+   "summary": "Result to be posted by the commissioner.",
+   "result": null,
+   "entrants": 0,
+   "pot": 0,
+   "winners": [],
+   "share": null,
+   "groups": []
+  }
+ ]
 }
