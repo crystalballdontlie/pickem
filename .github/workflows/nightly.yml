@@ -10,7 +10,7 @@ on:
     - cron: "15 8 * * *"
   push:
     branches: [main]
-        paths: ["picks.csv", "lines.csv", "config.json", "side_bets.csv", "site/**", "scripts/**"]
+    paths: ["picks.csv", "lines.csv", "config.json", "side_bets.csv", "site/**", "scripts/**"]
   workflow_dispatch:
     inputs:
       season:
@@ -50,8 +50,12 @@ jobs:
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # Start from the newest version of main, so this run includes any data
+      # saved by an earlier run and any files you uploaded in the meantime.
       - uses: actions/checkout@v4
         if: steps.when.outputs.run == 'true'
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         if: steps.when.outputs.run == 'true'
@@ -77,8 +81,17 @@ jobs:
           git config user.name "standings-bot"
           git config user.email "standings-bot@users.noreply.github.com"
           git add site/data/pool.json
-          git diff --cached --quiet || git commit -m "Standings update $(TZ=America/Los_Angeles date +%Y-%m-%d)"
-          git push
+          if git diff --cached --quiet; then echo "No changes to save."; exit 0; fi
+          git commit -m "Standings update $(TZ=America/Los_Angeles date +%Y-%m-%d)"
+          # If you committed something while this ran, fold it in and try again.
+          # On a clash over pool.json, this run's freshly computed copy wins.
+          for attempt in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            echo "Push attempt $attempt failed; retrying in 10s"
+            git rebase --abort 2>/dev/null || true
+            sleep 10
+          done
+          exit 1
 
       - uses: actions/configure-pages@v5
         if: steps.when.outputs.run == 'true'
