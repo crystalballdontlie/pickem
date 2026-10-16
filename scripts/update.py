@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime as dt
+import io
 import json
 import os
 import re
@@ -372,7 +373,7 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
             "The PICKS_CSV_URL link returned a web page instead of a CSV file. In the responses "
             "sheet use File > Share > Publish to web, choose the responses tab and "
             "'Comma-separated values (.csv)', and copy that link.")
-    rows = list(csv.reader(text.splitlines()))
+    rows = list(csv.reader(io.StringIO(text, newline="")))
     if not rows:
         return [], ["The Google Form has no responses yet."], 0
     header, body = rows[0], [r for r in rows[1:] if any(c.strip() for c in r)]
@@ -384,7 +385,8 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
     if name_col is None:
         raise SystemExit("The form needs a question with 'name' in its title (for example 'Your name').")
 
-    lock_col = next((i for i, h in enumerate(header) if "lock" in h.lower() and i != name_col), None)
+    lock_col = next((i for i, h in enumerate(header)
+                     if "lock" in h.lower() and i != name_col and not side_bet_def(h)), None)
     lock_limit = 3
     if lock_col is not None:
         m = re.search(r"\b(one|two|three|four|five|\d)\b[^.]*\block", header[lock_col].lower())
@@ -392,8 +394,12 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
         if m:
             lock_limit = words.get(m.group(1)) or int(m.group(1))
 
+    side_cols = {i: d for i, d in ((i, side_bet_def(h)) for i, h in enumerate(header)) if d}
+
     team_cols: dict[int, str] = {}
     for i, h in enumerate(header):
+        if i in side_cols:
+            continue
         # Team questions have short titles ("Atlanta Hawks 43.5"); long ones are side questions.
         abbr = team_in_header(h) if len(h.split()) <= 10 else None
         if i in (name_col, lock_col) or not abbr:
@@ -426,7 +432,9 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
         lock_raw = r[lock_col] if lock_col is not None and lock_col < len(r) else ""
         entry_warnings: list[str] = []
         locks = parse_locks(lock_raw, name, entry_warnings, lock_limit)
-        latest[name.casefold()] = {"name": name, "picks": picks, "locks": locks,
+        side = {d["number"]: " ".join(r[i].split()) for i, d in side_cols.items()
+                if i < len(r) and r[i].strip()}
+        latest[name.casefold()] = {"name": name, "picks": picks, "locks": locks, "side": side,
                                    "notes": entry_warnings}  # later rows replace earlier ones
     people = list(latest.values())
     for p in people:
@@ -435,6 +443,201 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
         if missing_lock_picks:
             warnings.append(f"{p['name']} locked {', '.join(missing_lock_picks)} without picking a side.")
     return people, warnings, len(body)
+
+
+# --------------------------------------------------------------------------- #
+# Side bets
+# --------------------------------------------------------------------------- #
+SIDE_BET_ANTE = 5
+AUTO_SIDE_BETS = {1: "slowest_first_win", 2: "first_to_20"}
+
+
+def side_bet_def(header: str) -> dict | None:
+    """'$5 Side Bet #2 - Out the Gate Excellence / *Who will be the first team to 20 wins?' ->
+    {number: 2, title: 'Out the Gate Excellence', question: 'Who will be the first team to 20 wins?'}"""
+    m = re.search(r"side bet\s*#\s*(\d+)\s*[-\u2013\u2014:]?\s*([^\n]*)", header, re.I)
+    if not m:
+        return None
+    q = next((ln.strip().lstrip("*").strip() for ln in header.splitlines() if ln.strip().startswith("*")), "")
+    return {"number": int(m.group(1)), "title": m.group(2).strip() or f"Side bet #{m.group(1)}", "question": q}
+
+
+def side_bet_defs(text: str) -> list[dict]:
+    try:
+        header = next(csv.reader(io.StringIO(text, newline="")))
+    except StopIteration:
+        return []
+    defs = [d for d in (side_bet_def(h) for h in header) if d]
+    return sorted({d["number"]: d for d in defs}.values(), key=lambda d: d["number"])
+
+
+def team_game_logs(games: list[dict]) -> dict[str, list[dict]]:
+    """Each team's counted regular-season games in order: [{date, won, wins_after}]."""
+    seen, rows = set(), []
+    for g in games:
+        if g.get("id") in seen or not counts_in_standings(g):
+            continue
+        seen.add(g.get("id"))
+        hs, vs = g.get("home_team_score") or 0, g.get("visitor_team_score") or 0
+        if hs == vs:
+            continue
+        rows.append(g)
+    rows.sort(key=lambda g: (g.get("datetime") or g.get("date") or "", g.get("id") or 0))
+    logs: dict[str, list[dict]] = {a: [] for a in TEAMS}
+    for g in rows:
+        home = norm_team(g["home_team"]["abbreviation"])
+        away = norm_team(g["visitor_team"]["abbreviation"])
+        if home not in logs or away not in logs:
+            continue
+        home_won = g["home_team_score"] > g["visitor_team_score"]
+        for team, won in ((home, home_won), (away, not home_won)):
+            prev = logs[team][-1]["wins_after"] if logs[team] else 0
+            logs[team].append({"date": (g.get("date") or "")[:10], "won": won, "wins_after": prev + won})
+    return logs
+
+
+def _team_list(abbrs) -> str:
+    names = [TEAMS[a][0] for a in abbrs]
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+
+
+def auto_side_bet(kind: str, logs: dict[str, list[dict]]) -> dict:
+    """Result and per-team status for the bets the game results can settle."""
+    if kind == "slowest_first_win":
+        first = {a: next((i + 1 for i, g in enumerate(log) if g["won"]), None) for a, log in logs.items()}
+        winless = [a for a, n in first.items() if n is None]
+        status = {}
+        for a, log in logs.items():
+            status[a] = (f"first win in game {first[a]}" if first[a]
+                         else f"still winless (0-{len(log)})" if log else "hasn't played")
+        if not any(logs.values()):
+            return {"final": False, "teams": [], "summary": "Starts on opening night.", "status": status}
+        if winless:
+            longest = sorted(winless, key=lambda a: -len(logs[a]))
+            return {"final": False, "teams": [], "status": status,
+                    "summary": f"Still winless: " + ", ".join(f"{TEAMS[a][0]} (0-{len(logs[a])})" for a in longest) + "."}
+        worst = max(first.values())
+        teams = sorted(a for a, n in first.items() if n == worst)
+        return {"final": True, "teams": teams, "status": status,
+                "summary": f"{_team_list(teams)}: first win came in game {worst}."}
+
+    if kind == "first_to_20":
+        dated = []
+        for a, log in logs.items():
+            hit = next((g["date"] for g in log if g["wins_after"] >= 20), None)
+            if hit:
+                dated.append((hit, a))
+        wins = {a: (log[-1]["wins_after"] if log else 0) for a, log in logs.items()}
+        status = {a: f"{wins[a]} wins" for a in logs}
+        if dated:
+            day = min(d for d, _ in dated)
+            teams = sorted(a for d, a in dated if d == day)
+            note = " on the same night" if len(teams) > 1 else ""
+            return {"final": True, "teams": teams, "status": status,
+                    "summary": f"{_team_list(teams)} reached 20 wins first{note} ({day})."}
+        top = max(wins.values()) if wins else 0
+        if top == 0:
+            return {"final": False, "teams": [], "status": status, "summary": "Starts on opening night."}
+        leaders = sorted(a for a, w in wins.items() if w == top)
+        return {"final": False, "teams": [], "status": status,
+                "summary": f"Closest: {_team_list(leaders)} with {top} wins."}
+    raise ValueError(kind)
+
+
+def _norm(s: str) -> str:
+    return " ".join(re.sub(r"[^a-z0-9 ]", " ", (s or "").lower()).split())
+
+
+def answer_key(answer: str) -> tuple[str, str]:
+    teams = teams_in_text(answer)
+    if len(teams) == 1:
+        return teams[0], TEAMS[teams[0]][0]
+    return "text:" + _norm(answer), answer
+
+
+def answer_matches(answer: str, result: str) -> bool:
+    """Same team, or for player/coach answers the same name (a last name alone counts)."""
+    a_team, r_team = teams_in_text(answer), teams_in_text(result)
+    if len(r_team) == 1 and len(a_team) == 1:
+        return a_team == r_team
+    a, r = _norm(answer), _norm(result)
+    if not a or not r:
+        return False
+    return a == r or r.split()[-1] in a.split() or a in r.split()
+
+
+def load_manual_side_bets(path: Path) -> dict[int, dict]:
+    if not path.exists():
+        return {}
+    out = {}
+    for row in _csv_rows(path):
+        try:
+            n = int((row.get("bet") or "").strip().lstrip("#"))
+        except ValueError:
+            continue
+        result = (row.get("result") or "").strip()
+        winners = [w.strip() for w in (row.get("winners") or "").split(";") if w.strip()]
+        if result or winners:
+            out[n] = {"result": result, "winners": winners}
+    return out
+
+
+def build_side_bets(defs: list[dict], people: list[dict], games: list[dict], manual: dict[int, dict]) -> list[dict]:
+    logs = team_game_logs(games)
+    bets = []
+    for d in defs:
+        n = d["number"]
+        entries = [(p["name"], p["side"][n]) for p in people if p.get("side", {}).get(n)]
+        auto = AUTO_SIDE_BETS.get(n)
+        info = auto_side_bet(auto, logs) if auto else None
+        man = manual.get(n)
+
+        result_label, final, winners_by_rule = None, False, None
+        if man:  # your entry in side_bets.csv always wins
+            final = True
+            result_label = man["result"] or None
+            if man["winners"]:
+                wanted = {w.casefold() for w in man["winners"]}
+                winners_by_rule = {name for name, _ in entries if name.casefold() in wanted}
+        elif info and info["final"]:
+            final = True
+            result_label = _team_list(info["teams"])
+
+        def is_winner(name: str, answer: str) -> bool:
+            if not final:
+                return False
+            if winners_by_rule is not None:
+                return name in winners_by_rule
+            if man and man["result"]:
+                return answer_matches(answer, man["result"])
+            if info and info["final"]:
+                return answer_key(answer)[0] in info["teams"]
+            return False
+
+        groups: dict[str, dict] = {}
+        for name, answer in entries:
+            key, label = answer_key(answer)
+            g = groups.setdefault(key, {"label": label, "names": [], "winner": False,
+                                        "status": (info["status"].get(key) if info and key in TEAMS else None)})
+            g["names"].append(name)
+            g["winner"] = g["winner"] or is_winner(name, answer)
+        winners = sorted({name for name, answer in entries if is_winner(name, answer)}, key=str.lower)
+        pot = SIDE_BET_ANTE * len(entries)
+
+        if man:
+            summary = f"Result: {result_label}." if result_label else "Result posted."
+        elif info:
+            summary = info["summary"]
+        else:
+            summary = "Result to be posted by the commissioner."
+        bets.append({
+            "number": n, "title": d["title"], "question": d["question"],
+            "automatic": bool(auto) and not man, "final": final, "summary": summary,
+            "result": result_label, "entrants": len(entries), "pot": pot,
+            "winners": winners, "share": round(pot / len(winners), 2) if winners else None,
+            "groups": sorted(groups.values(), key=lambda g: (not g["winner"], -len(g["names"]), g["label"].lower())),
+        })
+    return bets
 
 
 # --------------------------------------------------------------------------- #
@@ -555,11 +758,13 @@ def main() -> None:
             print("Fetching picks from the Google Form responses...")
             text = fetch_text(form_url)
         people, warnings, n_responses = parse_form_csv(text, lines)
+        side_defs = side_bet_defs(text)
         picks_source = f"{len(people)} entries from the Google Form"
         if n_responses > len(people):
             picks_source += f" ({n_responses - len(people)} earlier resubmissions replaced)"
     else:
         people = load_picks(args.root / "picks.csv")
+        side_defs = []
         picks_source = f"{len(people)} entries from picks.csv"
     print(f"  {picks_source}")
     for w in warnings:
@@ -598,6 +803,8 @@ def main() -> None:
     payload["test_note"] = test_note
     payload["picks_source"] = picks_source
     payload["warnings"] = warnings[:12]
+    payload["side_bets"] = build_side_bets(side_defs, people, games,
+                                           load_manual_side_bets(args.root / "side_bets.csv"))
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(payload, indent=1) + "\n")
