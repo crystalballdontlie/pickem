@@ -1,0 +1,11 @@
+# Side bet results. Edit this file on GitHub (pencil icon) when a result is known; the site updates a few minutes after you commit.
+# bet: the side bet number from the form.
+# result: the team or player that won, e.g. Milwaukee Bucks or Domantas Sabonis. Entries that name the same team (or player's last name) win.
+# winners: optional. Names of pool members who won, separated by semicolons, exactly as they entered them. Use this when answers are worded differently, e.g. a coach's name instead of a team.
+# Bets 1 and 2 settle automatically from game results; anything you fill in here overrides that.
+bet,result,winners
+1,,
+2,,
+3,,
+4,,
+5,,
