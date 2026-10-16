@@ -67,6 +67,9 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .who .name { font-weight: 600; font-size: 1.05rem; }
 .strip { display: grid; grid-template-columns: repeat(30, minmax(0, 1fr)); gap: 2px; max-width: 420px; }
 .strip i { height: 12px; border-radius: 2px; }
+.strip i.lk, .sw.lk { box-shadow: inset 0 0 0 2px var(--ink); }
+.pk.lk { border: 2px solid var(--ink); padding: 5px 7px; }
+.pk .lock { white-space: nowrap; font: 600 .75rem var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
 .stat { text-align: right; font: 600 1.25rem var(--display); }
 .stat.proj { color: var(--accent); font-size: 1.5rem; }
 .row.head .stat { font-size: .8rem; }
@@ -76,11 +79,29 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .pk { display: grid; grid-template-columns: 3rem 1fr auto; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 5px; border: 1px solid var(--line); font-size: .9rem; }
 .pk b { font-family: var(--display); font-size: 1.05rem; }
 .pk .res { font-size: .8rem; color: var(--muted); white-space: nowrap; }
-.pk .tag { font: 600 .8rem var(--display); text-transform: uppercase; letter-spacing: .05em; padding: 1px 6px; border-radius: 3px; }
+.pk .tag { white-space: nowrap; font: 600 .8rem var(--display); text-transform: uppercase; letter-spacing: .05em; padding: 1px 6px; border-radius: 3px; }
 
 .won { background: var(--won); } .lost { background: var(--lost); } .on_pace { background: var(--on); }
 .off_pace { background: var(--off); } .even, .push { background: var(--even); } .none { background: transparent; outline: 1px dashed var(--line); }
 .tag.won, .tag.lost { color: #fff; } .tag.on_pace, .tag.off_pace, .tag.even, .tag.push { color: var(--ink); }
+
+/* Side bets */
+.bets { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 12px; align-items: start; }
+.bet { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.bet h3 { margin: 0; font: 700 1.2rem/1.15 var(--display); text-transform: uppercase; letter-spacing: .02em; text-wrap: balance; }
+.bet .num-tag { color: var(--accent); margin-right: 6px; }
+.bet .q { margin: 0; color: var(--muted); font-size: .9rem; }
+.bet .state { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: .9rem; }
+.bet .chip.final { background: var(--won); color: #fff; }
+.bet .chip.open { border: 1px solid var(--line); color: var(--muted); }
+.bet .pot { color: var(--muted); font-size: .85rem; }
+.bet .pot b { color: var(--ink); }
+.grp { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 7px 0; border-top: 1px solid var(--line); font-size: .9rem; }
+.grp .pick { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.grp .st { color: var(--muted); font-size: .8rem; text-align: right; white-space: nowrap; }
+.grp .who { grid-column: 1 / -1; color: var(--muted); }
+.grp.win { background: color-mix(in srgb, var(--won) 12%, var(--surface)); border-radius: 5px; padding-inline: 8px; border-top-color: transparent; }
+.grp.win .pick::after { content: " \2014 winner"; color: var(--won); font-weight: 600; }
 
 /* Teams */
 .scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
@@ -131,19 +152,21 @@ footer { color: var(--muted); font-size: .85rem; }
   <nav role="tablist">
     <button role="tab" id="tab-board" aria-selected="true" data-view="board">Leaderboard</button>
     <button role="tab" id="tab-teams" aria-selected="false" data-view="teams">Teams</button>
+    <button role="tab" id="tab-side" aria-selected="false" data-view="side" hidden>Side bets</button>
   </nav>
 
   <section id="view-board" style="display:grid; gap:12px">
     <div class="legend">
-      <span><i class="sw won"></i>Won (locked)</span>
+      <span><i class="sw won"></i>Won (settled)</span>
       <span><i class="sw on_pace"></i>On pace</span>
       <span><i class="sw off_pace"></i>Off pace</span>
-      <span><i class="sw lost"></i>Lost (locked)</span>
+      <span><i class="sw lost"></i>Lost (settled)</span>
       <span><i class="sw even"></i>Even or push</span>
+      <span><i class="sw lk"></i>Lock (counts double)</span>
     </div>
     <div class="board" id="board"></div>
     <p class="label" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.85rem">
-      Projected = picks already won + open picks where the team's current pace is on your side of the line. Tap a name to see every pick.
+      Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. Tap a name to see every pick.
     </p>
   </section>
 
@@ -161,6 +184,13 @@ footer { color: var(--muted); font-size: .85rem; }
       </tr></thead>
       <tbody id="teams"></tbody>
     </table></div>
+  </section>
+
+  <section id="view-side" hidden style="display:grid; gap:12px">
+    <p class="label" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.9rem">
+      Each side bet is a $5 ante, played only against others who entered it. Bets 1 and 2 settle themselves from game results; the commissioner posts the rest.
+    </p>
+    <div class="bets" id="bets"></div>
   </section>
 
   <footer id="foot">Records come from balldontlie game results and are cross-checked against ESPN's standings each night around midnight Pacific.</footer>
@@ -212,20 +242,20 @@ footer { color: var(--muted); font-size: .85rem; }
       return;
     }
     let html = `<div class="row head"><span class="label">#</span><span class="label">Player</span>
-      <span class="label stat hide-sm">Won</span><span class="label stat hide-sm">Lost</span><span class="label stat">On pace</span><span class="label stat">Proj.</span></div>`;
+      <span class="label stat hide-sm">Won</span><span class="label stat hide-sm">Lost</span><span class="label stat">Pts</span><span class="label stat">Proj.</span></div>`;
     data.players.forEach((p, i) => {
-      const strip = order.map((a) => `<i class="${p.picks[a].state}" title="${a}: ${STATE_LABEL[p.picks[a].state]}"></i>`).join("");
+      const strip = order.map((a) => `<i class="${p.picks[a].state}${p.picks[a].lock ? " lk" : ""}" title="${a}: ${STATE_LABEL[p.picks[a].state]}${p.picks[a].lock ? " (lock)" : ""}"></i>`).join("");
       const picks = order.map((a) => {
         const t = teams[a], pk = p.picks[a];
         const pick = pk.pick ? pk.pick[0].toUpperCase() + pk.pick.slice(1) : "—";
-        return `<div class="pk"><b>${a}</b><span>${pick} ${t.line ?? "—"}<br><span class="res num">${t.w}-${t.l}${t.proj != null ? ` \u00b7 pace ${t.proj}` : ""}</span></span>
+        return `<div class="pk${pk.lock ? " lk" : ""}"><b>${a}</b><span>${pick} ${t.line ?? "—"}${pk.lock ? ' <span class="lock">Lock \u00d72</span>' : ""}<br><span class="res num">${t.w}-${t.l}${t.proj != null ? ` \u00b7 pace ${t.proj}` : ""}</span></span>
           <span class="tag ${pk.state}">${STATE_LABEL[pk.state]}</span></div>`;
       }).join("");
       html += `<div class="row" tabindex="0" role="button" aria-expanded="false" id="p${i}">
         <span class="rank num">${p.rank}</span>
         <div class="who"><span class="name">${esc(p.name)}</span><div class="strip" aria-hidden="true">${strip}</div></div>
         <span class="stat num hide-sm">${p.won}</span><span class="stat num hide-sm">${p.lost}</span>
-        <span class="stat num">${p.on_pace}</span><span class="stat proj num">${p.projected}</span>
+        <span class="stat num">${p.points}</span><span class="stat proj num">${p.projected}</span>
         <div class="detail" hidden><div class="picks">${picks}</div></div></div>`;
     });
     $("board").innerHTML = html;
@@ -269,11 +299,34 @@ footer { color: var(--muted); font-size: .85rem; }
     }).join("");
   }
 
+  function sideBets() {
+    const bets = data.side_bets || [];
+    $("tab-side").hidden = !bets.length;
+    if (!bets.length) return;
+    const money = (v) => "$" + (Number.isInteger(v) ? v : v.toFixed(2));
+    $("bets").innerHTML = bets.map((b) => {
+      const chip = b.final ? '<span class="chip final">Final</span>'
+        : b.automatic ? '<span class="chip open">Updates nightly</span>' : '<span class="chip open">Awaiting result</span>';
+      let pot = `${b.entrants} ${b.entrants === 1 ? "entry" : "entries"} \u00b7 pot <b>${money(b.pot)}</b>`;
+      if (b.final && b.winners.length) pot += ` \u00b7 ${b.winners.length === 1 ? "winner takes" : `${b.winners.length} winners split, `} <b>${money(b.share)}</b>${b.winners.length > 1 ? " each" : ""}`;
+      else if (b.final && b.entrants) pot += " \u00b7 nobody picked it";
+      const groups = b.groups.length ? b.groups.map((g) => `<div class="grp${g.winner ? " win" : ""}">
+          <span class="pick">${esc(g.label)}</span><span class="st">${g.status ? esc(g.status) : `${g.names.length} pick${g.names.length > 1 ? "s" : ""}`}</span>
+          <span class="who">${g.names.map(esc).join(", ")}</span></div>`).join("")
+        : '<p class="q">No entries yet.</p>';
+      return `<article class="bet"><h3><span class="num-tag num">#${b.number}</span>${esc(b.title)}</h3>
+        ${b.question ? `<p class="q">${esc(b.question)}</p>` : ""}
+        <div class="state">${chip}<span>${esc(b.summary)}</span></div>
+        <div class="pot">${pot}</div><div>${groups}</div></article>`;
+    }).join("");
+  }
+
   function tabs() {
     document.querySelectorAll("nav button").forEach((b) => b.addEventListener("click", () => {
       document.querySelectorAll("nav button").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
       $("view-board").hidden = b.dataset.view !== "board";
       $("view-teams").hidden = b.dataset.view !== "teams";
+      $("view-side").hidden = b.dataset.view !== "side";
     }));
     $("conf").addEventListener("change", teamsTable);
     $("sort").addEventListener("change", teamsTable);
@@ -282,7 +335,7 @@ footer { color: var(--muted); font-size: .85rem; }
   tabs();
   fetch("data/pool.json", { cache: "no-store" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => { data = d; header(); board(); teamsTable(); })
+    .then((d) => { data = d; header(); board(); teamsTable(); sideBets(); })
     .catch(() => { $("board").innerHTML = '<div class="empty">Standings data is not available yet. It is created by the first nightly update.</div>'; });
 })();
 </script>
