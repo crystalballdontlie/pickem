@@ -10,7 +10,7 @@ on:
     - cron: "15 8 * * *"
   push:
     branches: [main]
-    paths: ["picks.csv", "lines.csv", "config.json", "site/**", "scripts/**"]
+        paths: ["picks.csv", "lines.csv", "config.json", "side_bets.csv", "site/**", "scripts/**"]
   workflow_dispatch:
     inputs:
       season:
