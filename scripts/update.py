@@ -247,6 +247,7 @@ def load_picks(path: Path) -> list[dict]:
     people = []
     for row in _csv_rows(path):
         name = (row.pop("name", "") or "").strip()
+        lock_raw = row.pop("locks", "") or ""
         if not name:
             continue
         picks = {}
@@ -261,7 +262,10 @@ def load_picks(path: Path) -> list[dict]:
                 if v not in PICK_WORDS:
                     raise SystemExit(f"picks.csv: {name} has '{val}' for {team}; use O or U")
                 picks[team] = PICK_WORDS[v]
-        people.append({"name": name, "picks": picks})
+        lock_notes: list[str] = []
+        people.append({"name": name, "picks": picks, "locks": parse_locks(lock_raw, name, lock_notes)})
+        for w in lock_notes:
+            print(f"  note: {w}", file=sys.stderr)
     return people
 
 
@@ -307,6 +311,60 @@ def fetch_text(url: str) -> str:
     return ""
 
 
+CITY_WORDS = {
+    "atlanta": "ATL", "boston": "BOS", "brooklyn": "BKN", "charlotte": "CHA", "chicago": "CHI",
+    "cleveland": "CLE", "dallas": "DAL", "denver": "DEN", "detroit": "DET", "golden state": "GSW",
+    "houston": "HOU", "indiana": "IND", "memphis": "MEM", "miami": "MIA", "milwaukee": "MIL",
+    "minnesota": "MIN", "new orleans": "NOP", "new york": "NYK", "oklahoma city": "OKC",
+    "orlando": "ORL", "philadelphia": "PHI", "philly": "PHI", "phoenix": "PHX", "portland": "POR",
+    "sacramento": "SAC", "san antonio": "SAS", "toronto": "TOR", "utah": "UTA", "washington": "WAS",
+    "sixers": "PHI", "cavs": "CLE", "mavs": "DAL", "wolves": "MIN", "blazers": "POR", "dubs": "GSW",
+    "okc": "OKC",
+}
+
+
+def teams_in_text(text: str) -> list[str]:
+    """Teams named in free text such as 'Wizards over, Boston, NYK'. Nicknames first,
+    then city names and common short forms, then team codes."""
+    t = " " + re.sub(r"[^a-z0-9 ]", " ", text.lower()) + " "
+    found = []
+    for abbr, nick in NICKNAMES.items():
+        if f" {nick.lower()} " in t:
+            found.append(abbr)
+    if found:
+        return found
+    for word, abbr in CITY_WORDS.items():
+        if f" {word} " in t and abbr not in found:
+            found.append(abbr)
+    if found:
+        return found
+    for tok in re.findall(r"[A-Za-z]{2,4}", text):
+        code = norm_team(tok)
+        if tok.isupper() and tok != "LA" and code in TEAMS and code not in found:
+            found.append(code)
+    return found
+
+
+def parse_locks(raw: str, name: str, warnings: list[str], limit: int = 3) -> list[str]:
+    raw = (raw or "").strip()
+    if not raw:
+        return []
+    locks: list[str] = []
+    for piece in re.split(r"[,;/\n]|\band\b|&", raw):
+        if not piece.strip():
+            continue
+        teams = teams_in_text(piece)
+        if len(teams) == 1:
+            if teams[0] not in locks:
+                locks.append(teams[0])
+        else:
+            warnings.append(f"{name}'s lock '{piece.strip()}' doesn't name one team; it was skipped.")
+    if len(locks) > limit:
+        warnings.append(f"{name} listed {len(locks)} locks; only the first {limit} count.")
+        locks = locks[:limit]
+    return locks
+
+
 def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list[str], int]:
     """Returns (people, warnings, response_count). Each person's latest response wins."""
     if text.lstrip().startswith("<"):
@@ -326,10 +384,19 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
     if name_col is None:
         raise SystemExit("The form needs a question with 'name' in its title (for example 'Your name').")
 
+    lock_col = next((i for i, h in enumerate(header) if "lock" in h.lower() and i != name_col), None)
+    lock_limit = 3
+    if lock_col is not None:
+        m = re.search(r"\b(one|two|three|four|five|\d)\b[^.]*\block", header[lock_col].lower())
+        words = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5}
+        if m:
+            lock_limit = words.get(m.group(1)) or int(m.group(1))
+
     team_cols: dict[int, str] = {}
     for i, h in enumerate(header):
-        abbr = team_in_header(h)
-        if i == name_col or not abbr:
+        # Team questions have short titles ("Atlanta Hawks 43.5"); long ones are side questions.
+        abbr = team_in_header(h) if len(h.split()) <= 10 else None
+        if i in (name_col, lock_col) or not abbr:
             continue
         if abbr in team_cols.values():
             warnings.append(f"The form has more than one question about the {TEAMS[abbr][0]}; using the first.")
@@ -356,8 +423,18 @@ def parse_form_csv(text: str, lines: dict[str, float]) -> tuple[list[dict], list
                 picks[abbr] = PICK_WORDS[word]
             elif raw:
                 warnings.append(f"{name}'s answer '{raw}' for the {TEAMS[abbr][0]} isn't Over or Under; left blank.")
-        latest[name.casefold()] = {"name": name, "picks": picks}  # later rows replace earlier ones
-    return list(latest.values()), warnings, len(body)
+        lock_raw = r[lock_col] if lock_col is not None and lock_col < len(r) else ""
+        entry_warnings: list[str] = []
+        locks = parse_locks(lock_raw, name, entry_warnings, lock_limit)
+        latest[name.casefold()] = {"name": name, "picks": picks, "locks": locks,
+                                   "notes": entry_warnings}  # later rows replace earlier ones
+    people = list(latest.values())
+    for p in people:
+        warnings.extend(p.pop("notes"))
+        missing_lock_picks = [a for a in p["locks"] if a not in p["picks"]]
+        if missing_lock_picks:
+            warnings.append(f"{p['name']} locked {', '.join(missing_lock_picks)} without picking a side.")
+    return people, warnings, len(body)
 
 
 # --------------------------------------------------------------------------- #
@@ -410,23 +487,29 @@ def build_payload(config, records, last_date, check, lines, people) -> dict:
 
     players = []
     for p in people:
+        locks = set(p.get("locks", []))
         states = {abbr: score_pick(p["picks"].get(abbr), outlooks[abbr]) for abbr in TEAMS}
+        weight = {abbr: (2 if abbr in locks else 1) for abbr in TEAMS}
         won = sum(s == "won" for s in states.values())
         lost = sum(s == "lost" for s in states.values())
         on_pace = sum(s == "on_pace" for s in states.values())
+        points = sum(weight[a] for a, s in states.items() if s == "won")
+        pace_points = sum(weight[a] for a, s in states.items() if s == "on_pace")
         players.append({
             "name": p["name"],
-            "picks": {a: {"pick": p["picks"].get(a), "state": s} for a, s in states.items()},
+            "picks": {a: {"pick": p["picks"].get(a), "state": s, "lock": a in locks} for a, s in states.items()},
+            "locks": sorted(locks),
             "won": won, "lost": lost,
             "pushes": sum(s == "push" for s in states.values()),
             "on_pace": on_pace,
-            "projected": won + on_pace,
+            "points": points,
+            "projected": points + pace_points,
         })
-    players.sort(key=lambda x: (-x["projected"], -x["won"], x["lost"], x["name"].lower()))
+    players.sort(key=lambda x: (-x["projected"], -x["points"], x["lost"], x["name"].lower()))
     rank = 0
     prev = None
     for i, pl in enumerate(players, 1):
-        key = (pl["projected"], pl["won"], pl["lost"])
+        key = (pl["projected"], pl["points"], pl["lost"])
         if key != prev:
             rank, prev = i, key
         pl["rank"] = rank
