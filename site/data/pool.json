@@ -4,7 +4,7 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-21T04:36:21+00:00",
+ "generated_at": "2026-10-21T04:51:43+00:00",
  "last_game_date": "2026-10-20",
  "games_played_total": 3,
  "check": {
@@ -1905,15 +1905,8 @@
      "label": "Houston Rockets",
      "names": [
       "Amos Goldbaum",
+      "Timothy Won",
       "Monta Ellis (Alex)"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Amen Thompson",
-     "names": [
-      "Timothy Won"
      ],
      "winner": false,
      "status": null
@@ -1921,15 +1914,8 @@
     {
      "label": "Los Angeles Lakers",
      "names": [
+      "Jason",
       "Jon Stich"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Luka",
-     "names": [
-      "Jason"
      ],
      "winner": false,
      "status": null
@@ -1967,7 +1953,7 @@
      "status": null
     },
     {
-     "label": "Keny Atkinson",
+     "label": "Cleveland Cavaliers",
      "names": [
       "Jason"
      ],
@@ -2088,8 +2074,18 @@
     {
      "label": "Luka Doncic",
      "names": [
+      "Jason",
       "Amos Goldbaum",
       "Jon Stich"
+     ],
+     "winner": false,
+     "status": null
+    },
+    {
+     "label": "Shai",
+     "names": [
+      "Timothy Won",
+      "Monta Ellis (Alex)"
      ],
      "winner": false,
      "status": null
@@ -2098,30 +2094,6 @@
      "label": "Giannis",
      "names": [
       "Eric"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Luka",
-     "names": [
-      "Jason"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Sga",
-     "names": [
-      "Timothy Won"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Shai",
-     "names": [
-      "Monta Ellis (Alex)"
      ],
      "winner": false,
      "status": null
@@ -2144,7 +2116,8 @@
     {
      "label": "Brandon Podziemski",
      "names": [
-      "Amos Goldbaum"
+      "Amos Goldbaum",
+      "Timothy Won"
      ],
      "winner": false,
      "status": null
@@ -2153,14 +2126,6 @@
      "label": "Jalen Brunson",
      "names": [
       "Eric"
-     ],
-     "winner": false,
-     "status": null
-    },
-    {
-     "label": "Podz",
-     "names": [
-      "Timothy Won"
      ],
      "winner": false,
      "status": null
