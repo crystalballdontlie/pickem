@@ -2,12 +2,18 @@ name: Nightly standings update
 
 on:
   schedule:
-    # GitHub schedules run in UTC. These two times cover midnight Pacific in
-    # both daylight time (07:15 UTC = 12:15 AM PDT) and standard time
-    # (08:15 UTC = 12:15 AM PST). The "when" step below skips whichever one
-    # isn't the midnight hour in Los Angeles.
-    - cron: "15 7 * * *"
-    - cron: "15 8 * * *"
+    # GitHub schedules run in UTC, so this fires every hour from 01:07 to 09:07 UTC.
+    # The "When" step keeps only the runs that land on the Pacific times listed in
+    # UPDATE_HOURS below, in both daylight time (UTC-7) and standard time (UTC-8).
+    - cron: "7 1 * * *"
+    - cron: "7 2 * * *"
+    - cron: "7 3 * * *"
+    - cron: "7 4 * * *"
+    - cron: "7 5 * * *"
+    - cron: "7 6 * * *"
+    - cron: "7 7 * * *"
+    - cron: "7 8 * * *"
+    - cron: "7 9 * * *"
   push:
     branches: [main]
     paths: ["picks.csv", "lines.csv", "config.json", "side_bets.csv", "site/**", "scripts/**"]
@@ -38,15 +44,26 @@ jobs:
     steps:
       - name: When
         id: when
+        env:
+          # Pacific-time hours to update on game nights (24-hour clock): 6 PM, 8 PM,
+          # 10 PM, midnight and 1 AM. To change them, edit this list.
+          UPDATE_HOURS: "18 20 22 0 1"
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
         run: |
-          hour=$(TZ=America/Los_Angeles date +%H)
-          echo "Local LA time: $(TZ=America/Los_Angeles date)"
-          # GitHub can start scheduled runs late, so accept anything from
-          # midnight to 2:59 AM Pacific; manual and push runs always go.
-          if [ "${{ github.event_name }}" != "schedule" ] || [ "$hour" -lt 3 ]; then
+          echo "Now in Los Angeles: $(TZ=America/Los_Angeles date)"
+          if [ "$EVENT" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # Use the time this run was scheduled for, not when it started:
+          # GitHub sometimes starts scheduled runs late.
+          utc_hour=$(echo "$SCHEDULE" | awk '{print $2}')
+          la_hour=$(TZ=America/Los_Angeles date -d "$(date -u +%F) ${utc_hour}:07 UTC" +%-H)
+          if [[ " $UPDATE_HOURS " == *" $la_hour "* ]]; then
+            echo "Scheduled for ${la_hour}:07 Pacific; updating."
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
-            echo "Not the midnight run for this time of year; skipping."
+            echo "Scheduled for ${la_hour}:07 Pacific, which isn't an update time; skipping."
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
