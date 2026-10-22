@@ -43,13 +43,14 @@ header { display: grid; gap: 14px; }
 .pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: .85rem; border: 1px solid var(--line); background: var(--surface); }
 .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--even); }
 .pill.match::before { background: var(--won); }
+.pill.settling::before { background: var(--on); }
 .pill.mismatch::before { background: var(--lost); }
 .banner { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); padding: 10px 14px; border-radius: 6px; }
 .banner[hidden] { display: none; }
 
-nav { display: flex; gap: 4px; border-bottom: 2px solid var(--line); }
+nav { display: flex; gap: 4px; border-bottom: 2px solid var(--line); overflow-x: auto; }
 nav button { font: 600 1.05rem var(--display); text-transform: uppercase; letter-spacing: .06em; background: none; border: 0; color: var(--muted);
-  padding: 8px 14px; margin-bottom: -2px; border-bottom: 3px solid transparent; cursor: pointer; }
+  padding: 8px 14px; margin-bottom: -2px; white-space: nowrap; border-bottom: 3px solid transparent; cursor: pointer; }
 nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
 nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
@@ -58,6 +59,7 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; border: 1px solid var(--line); }
 
 /* Leaderboard */
+.board.bare { background: none; border: 0; }
 .board { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .row { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) repeat(4, 3.4rem); align-items: center; gap: 4px 10px; padding: 10px 14px; border-top: 1px solid var(--line); cursor: pointer; }
 .row.head { cursor: default; border-top: 0; padding-block: 8px; }
@@ -84,6 +86,13 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .won { background: var(--won); } .lost { background: var(--lost); } .on_pace { background: var(--on); }
 .off_pace { background: var(--off); } .even, .push { background: var(--even); } .none { background: transparent; outline: 1px dashed var(--line); }
 .tag.won, .tag.lost { color: #fff; } .tag.on_pace, .tag.off_pace, .tag.even, .tag.push { color: var(--ink); }
+
+/* Picks hidden before the deadline */
+.sealed { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 16px; display: grid; gap: 10px; }
+.sealed h3 { margin: 0; font: 700 1.3rem var(--display); text-transform: uppercase; letter-spacing: .02em; }
+.sealed p { margin: 0; color: var(--muted); max-width: 65ch; }
+.sealed ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.sealed li { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: .9rem; }
 
 /* Side bets */
 .bets { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 12px; align-items: start; }
@@ -156,7 +165,7 @@ footer { color: var(--muted); font-size: .85rem; }
   </nav>
 
   <section id="view-board" style="display:grid; gap:12px">
-    <div class="legend">
+    <div class="legend" id="legend">
       <span><i class="sw won"></i>Won (settled)</span>
       <span><i class="sw on_pace"></i>On pace</span>
       <span><i class="sw off_pace"></i>Off pace</span>
@@ -165,7 +174,7 @@ footer { color: var(--muted); font-size: .85rem; }
       <span><i class="sw lk"></i>Lock (counts double)</span>
     </div>
     <div class="board" id="board"></div>
-    <p class="label" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.85rem">
+    <p class="label" id="pointsNote" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.85rem">
       Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. Tap a name to see every pick.
     </p>
   </section>
@@ -210,6 +219,13 @@ footer { color: var(--muted); font-size: .85rem; }
     } catch { return iso; }
   }
 
+  function fmtUntil(iso) {
+    try {
+      return new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", weekday: "short", month: "short",
+        day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(new Date(iso));
+    } catch { return iso; }
+  }
+
   function header() {
     $("season").textContent = `NBA ${data.season_label} \u00b7 win totals`;
     $("poolName").textContent = data.pool_name;
@@ -223,8 +239,10 @@ footer { color: var(--muted); font-size: .85rem; }
     pill.textContent = c.status === "match" ? "Verified against ESPN"
       : c.status === "mismatch" ? `ESPN disagrees on ${c.mismatches.length} team${c.mismatches.length > 1 ? "s" : ""}`
       : c.status === "skipped" ? "ESPN check skipped (test cutoff date)"
+      : c.status === "settling" ? "Latest games still being confirmed"
       : "ESPN check unavailable tonight";
     const notes = [];
+    if (data.hidden) notes.push(`<b>Picks are hidden until ${esc(fmtUntil(data.hidden.until))}.</b> Everyone's picks appear after entries close.`);
     if (data.test_note) notes.push(`<b>Test run:</b> showing the ${esc(data.test_note)}, not the live season. The next scheduled update switches back automatically.`);
     if (data.demo) notes.push("<b>Sample data.</b> These names, lines and results are made up to show how the page works.");
     if (c.status === "mismatch") notes.push("Sources disagree for " + c.mismatches.map((m) => `${m.team} (${m.balldontlie} vs ESPN ${m.espn})`).join(", ") + ". This usually clears up by the next night's update.");
@@ -237,6 +255,15 @@ footer { color: var(--muted); font-size: .85rem; }
   function board() {
     const teams = Object.fromEntries(data.teams.map((t) => [t.abbr, t]));
     const order = data.teams.map((t) => t.abbr).sort();
+    if (data.hidden) {
+      const n = data.hidden.entrants.length;
+      $("board").innerHTML = `<div class="sealed"><h3>${n} ${n === 1 ? "entry" : "entries"} so far</h3>
+        <p>Picks stay hidden until ${esc(fmtUntil(data.hidden.until))}, when entries close. Check that your name is here; the list updates after each nightly update.</p>
+        ${n ? `<ul>${data.hidden.entrants.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`;
+      $("board").classList.add("bare");
+      $("legend").hidden = $("pointsNote").hidden = true;
+      return;
+    }
     if (!data.players.length) {
       $("board").innerHTML = '<div class="empty">No picks yet. Entries from the Google Form appear here after the next update.</div>';
       return;
@@ -291,8 +318,8 @@ footer { color: var(--muted); font-size: .85rem; }
           ${t.proj != null ? `<div class="span" style="left:${pct(Math.min(t.line, t.proj))};width:${Math.abs(t.proj - t.line) / n * 100}%;background:${color}"></div>` : ""}
           <div class="ln" style="left:${pct(t.line)}"></div>
           ${t.proj != null ? `<div class="dot" style="left:${pct(t.proj)};background:${color}"></div>` : ""}</div>`;
-      const tot = t.picked_over + t.picked_under;
-      const split = tot ? `<span class="split"><span class="num">${t.picked_over} O</span><span class="bar"><i style="width:${t.picked_over / tot * 100}%"></i></span><span class="num">${t.picked_under} U</span></span>` : "—";
+      const tot = (t.picked_over ?? 0) + (t.picked_under ?? 0);
+      const split = tot ? `<span class="split"><span class="num">${t.picked_over} O</span><span class="bar"><i style="width:${t.picked_over / tot * 100}%"></i></span><span class="num">${t.picked_under} U</span></span>` : (data.hidden ? "Hidden" : "—");
       return `<tr><td class="team"><b>${t.abbr}</b><span>${esc(t.name)}</span></td>
         <td class="r num">${t.w}-${t.l}</td><td class="r num">${t.line ?? "—"}</td><td class="r num">${t.proj ?? "—"}</td>
         <td class="pace">${track}</td><td>${status}</td><td>${clinch(t, n)}</td><td>${split}</td></tr>`;
@@ -308,12 +335,13 @@ footer { color: var(--muted); font-size: .85rem; }
       const chip = b.final ? '<span class="chip final">Final</span>'
         : b.automatic ? '<span class="chip open">Updates nightly</span>' : '<span class="chip open">Awaiting result</span>';
       let pot = `${b.entrants} ${b.entrants === 1 ? "entry" : "entries"} \u00b7 pot <b>${money(b.pot)}</b>`;
-      if (b.final && b.winners.length) pot += ` \u00b7 ${b.winners.length === 1 ? "winner takes" : `${b.winners.length} winners split, `} <b>${money(b.share)}</b>${b.winners.length > 1 ? " each" : ""}`;
+      if (data.hidden) { /* answers hidden: say nothing about winners yet */ }
+      else if (b.final && b.winners.length) pot += ` \u00b7 ${b.winners.length === 1 ? "winner takes" : `${b.winners.length} winners split, `} <b>${money(b.share)}</b>${b.winners.length > 1 ? " each" : ""}`;
       else if (b.final && b.entrants) pot += " \u00b7 nobody picked it";
       const groups = b.groups.length ? b.groups.map((g) => `<div class="grp${g.winner ? " win" : ""}">
           <span class="pick">${esc(g.label)}</span><span class="st">${g.status ? esc(g.status) : `${g.names.length} pick${g.names.length > 1 ? "s" : ""}`}</span>
           <span class="who">${g.names.map(esc).join(", ")}</span></div>`).join("")
-        : '<p class="q">No entries yet.</p>';
+        : (data.hidden ? '<p class="q">Answers are hidden until entries close.</p>' : '<p class="q">No entries yet.</p>');
       return `<article class="bet"><h3><span class="num-tag num">#${b.number}</span>${esc(b.title)}</h3>
         ${b.question ? `<p class="q">${esc(b.question)}</p>` : ""}
         <div class="state">${chip}<span>${esc(b.summary)}</span></div>
