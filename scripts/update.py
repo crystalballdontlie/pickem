@@ -219,6 +219,20 @@ def cross_check(primary: dict, espn: dict | None) -> dict:
     return {"status": "mismatch" if mismatches else "match", "mismatches": mismatches}
 
 
+def settle_mismatches(check: dict, previous: dict | None) -> dict:
+    """ESPN often posts a final score minutes before balldontlie does, so a run right after a
+    game can disagree briefly. Only report a team once it disagreed on the previous run too;
+    newer disagreements are kept under "recent" so the next run can confirm them."""
+    raw = check.get("mismatches", [])
+    if not raw:
+        return {"status": check["status"], "mismatches": [], "recent": []}
+    prev = (previous or {}).get("check") or {}
+    seen_before = {m["team"] for m in prev.get("mismatches", []) + prev.get("recent", [])}
+    confirmed = [m for m in raw if m["team"] in seen_before]
+    recent = [m for m in raw if m["team"] not in seen_before]
+    return {"status": "mismatch" if confirmed else "settling", "mismatches": confirmed, "recent": recent}
+
+
 # --------------------------------------------------------------------------- #
 # Pool inputs
 # --------------------------------------------------------------------------- #
@@ -734,6 +748,38 @@ def build_payload(config, records, last_date, check, lines, people) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# Keeping picks secret until the deadline
+# --------------------------------------------------------------------------- #
+def picks_hidden_until(config: dict, now: dt.datetime | None = None) -> dt.datetime | None:
+    """The reveal time from config.json's hide_picks_until, if it hasn't passed yet."""
+    raw = (config.get("hide_picks_until") or "").strip()
+    if not raw:
+        return None
+    try:
+        until = dt.datetime.fromisoformat(raw)
+    except ValueError:
+        raise SystemExit(f"config.json: hide_picks_until must look like 2026-10-20T12:00:00-07:00, not '{raw}'")
+    if until.tzinfo is None:
+        raise SystemExit("config.json: hide_picks_until needs a time zone offset, e.g. -07:00 for Pacific daylight time")
+    now = now or dt.datetime.now(dt.timezone.utc)
+    return until if now < until else None
+
+
+def redact_picks(payload: dict, until: dt.datetime) -> None:
+    """Strip everything that would reveal someone's picks; keep who has entered."""
+    names = sorted((p["name"] for p in payload["players"]), key=str.lower)
+    payload["hidden"] = {"until": until.isoformat(), "entrants": names}
+    payload["players"] = []
+    for t in payload["teams"]:
+        t["picked_over"] = t["picked_under"] = None
+    for b in payload.get("side_bets", []):
+        b["groups"], b["winners"], b["share"] = [], [], None
+    n = len(payload.get("warnings") or [])
+    payload["warnings"] = ([f"{n} note{'s' if n != 1 else ''} about entries will show here once picks are revealed."]
+                           if n else [])
+
+
+# --------------------------------------------------------------------------- #
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--fixtures", type=Path, help="read bdl_games.json / espn.json from this folder instead of the network")
@@ -767,8 +813,13 @@ def main() -> None:
         side_defs = []
         picks_source = f"{len(people)} entries from picks.csv"
     print(f"  {picks_source}")
-    for w in warnings:
-        print(f"  note: {w}")
+    hide_until = picks_hidden_until(config)
+    if hide_until:
+        print(f"  picks stay hidden until {hide_until.isoformat()}"
+              + (f"; {len(warnings)} notes withheld from this public log" if warnings else ""))
+    else:
+        for w in warnings:
+            print(f"  note: {w}")
 
     if args.fixtures:
         games = json.loads((args.fixtures / "bdl_games.json").read_text())
@@ -797,6 +848,13 @@ def main() -> None:
 
     records, last_date = count_records(games)
     check = cross_check(records, espn)
+    try:
+        previous = json.loads(args.out.read_text()) if args.out.exists() else None
+    except (OSError, ValueError):
+        previous = None
+    if previous and (previous.get("season") != season or previous.get("test_note")):
+        previous = None  # only compare with the last normal run of this season
+    check = settle_mismatches(check, previous)
     if args.through:
         check["status"] = "skipped"
     payload = build_payload(config, records, last_date, check, lines, people)
@@ -805,6 +863,9 @@ def main() -> None:
     payload["warnings"] = warnings[:12]
     payload["side_bets"] = build_side_bets(side_defs, people, games,
                                            load_manual_side_bets(args.root / "side_bets.csv"))
+    payload["hidden"] = None
+    if hide_until:
+        redact_picks(payload, hide_until)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(payload, indent=1) + "\n")
@@ -812,6 +873,8 @@ def main() -> None:
           f"{payload['games_played_total']} games, {len(people)} players, ESPN check: {check['status']}")
     for m in check["mismatches"]:
         print(f"  MISMATCH {m['team']}: balldontlie {m['balldontlie']} vs ESPN {m['espn']}")
+    for m in check.get("recent", []):
+        print(f"  (new, rechecked next run) {m['team']}: balldontlie {m['balldontlie']} vs ESPN {m['espn']}")
 
 
 if __name__ == "__main__":
