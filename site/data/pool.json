@@ -4,7 +4,7 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-25T06:02:17+00:00",
+ "generated_at": "2026-10-25T07:16:03+00:00",
  "last_game_date": "2026-10-24",
  "games_played_total": 36,
  "check": {
@@ -25,7 +25,7 @@
    "proj": 82.0,
    "result": null,
    "lean": "over",
-   "picked_over": 5,
+   "picked_over": 6,
    "picked_under": 3
   },
   {
@@ -41,7 +41,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "LAL",
@@ -56,7 +56,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 3,
-   "picked_under": 5
+   "picked_under": 6
   },
   {
    "abbr": "MEM",
@@ -71,7 +71,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 4,
-   "picked_under": 4
+   "picked_under": 5
   },
   {
    "abbr": "MIN",
@@ -86,7 +86,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "OKC",
@@ -101,7 +101,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 4,
-   "picked_under": 4
+   "picked_under": 5
   },
   {
    "abbr": "PHI",
@@ -116,7 +116,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "POR",
@@ -131,7 +131,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 4,
-   "picked_under": 4
+   "picked_under": 5
   },
   {
    "abbr": "TOR",
@@ -146,7 +146,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 6,
-   "picked_under": 2
+   "picked_under": 3
   },
   {
    "abbr": "ATL",
@@ -161,7 +161,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "CHA",
@@ -175,7 +175,7 @@
    "proj": 54.7,
    "result": null,
    "lean": "over",
-   "picked_over": 4,
+   "picked_over": 5,
    "picked_under": 4
   },
   {
@@ -191,7 +191,7 @@
    "result": null,
    "lean": "over",
    "picked_over": 4,
-   "picked_under": 4
+   "picked_under": 5
   },
   {
    "abbr": "BOS",
@@ -206,7 +206,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "CLE",
@@ -221,7 +221,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 8,
-   "picked_under": 0
+   "picked_under": 1
   },
   {
    "abbr": "DEN",
@@ -236,7 +236,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 5,
-   "picked_under": 3
+   "picked_under": 4
   },
   {
    "abbr": "IND",
@@ -251,7 +251,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 7,
-   "picked_under": 1
+   "picked_under": 2
   },
   {
    "abbr": "LAC",
@@ -265,7 +265,7 @@
    "proj": 41.0,
    "result": null,
    "lean": "over",
-   "picked_over": 3,
+   "picked_over": 4,
    "picked_under": 5
   },
   {
@@ -280,7 +280,7 @@
    "proj": 41.0,
    "result": null,
    "lean": "over",
-   "picked_over": 2,
+   "picked_over": 3,
    "picked_under": 6
   },
   {
@@ -295,7 +295,7 @@
    "proj": 41.0,
    "result": null,
    "lean": "over",
-   "picked_over": 5,
+   "picked_over": 6,
    "picked_under": 3
   },
   {
@@ -311,7 +311,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 3,
-   "picked_under": 5
+   "picked_under": 6
   },
   {
    "abbr": "DAL",
@@ -325,7 +325,7 @@
    "proj": 27.3,
    "result": null,
    "lean": "under",
-   "picked_over": 5,
+   "picked_over": 6,
    "picked_under": 3
   },
   {
@@ -341,7 +341,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 4,
-   "picked_under": 4
+   "picked_under": 5
   },
   {
    "abbr": "BKN",
@@ -355,7 +355,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 1,
+   "picked_over": 2,
    "picked_under": 7
   },
   {
@@ -370,7 +370,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 5,
+   "picked_over": 6,
    "picked_under": 3
   },
   {
@@ -386,7 +386,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 6,
-   "picked_under": 2
+   "picked_under": 3
   },
   {
    "abbr": "SAC",
@@ -400,7 +400,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 2,
+   "picked_over": 3,
    "picked_under": 6
   },
   {
@@ -415,7 +415,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 5,
+   "picked_over": 6,
    "picked_under": 3
   },
   {
@@ -431,7 +431,7 @@
    "result": null,
    "lean": "under",
    "picked_over": 6,
-   "picked_under": 2
+   "picked_under": 3
   },
   {
    "abbr": "MIL",
@@ -445,7 +445,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 1,
+   "picked_over": 2,
    "picked_under": 7
   },
   {
@@ -460,7 +460,7 @@
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 4,
+   "picked_over": 5,
    "picked_under": 4
   }
  ],
@@ -1635,6 +1635,173 @@
    "rank": 7
   },
   {
+   "name": "Maria",
+   "picks": {
+    "ATL": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "BOS": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "BKN": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "CHA": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CHI": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CLE": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "DAL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DEN": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "DET": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "GSW": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": true
+    },
+    "HOU": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "IND": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "LAC": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "LAL": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MEM": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIA": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "MIL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": true
+    },
+    "MIN": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "NOP": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "NYK": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "OKC": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "ORL": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "PHI": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "PHX": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "POR": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "SAC": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": true
+    },
+    "SAS": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "TOR": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "UTA": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "WAS": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    }
+   },
+   "locks": [
+    "GSW",
+    "MIL",
+    "SAC"
+   ],
+   "won": 0,
+   "lost": 0,
+   "pushes": 0,
+   "on_pace": 13,
+   "points": 0,
+   "projected": 13,
+   "rank": 7
+  },
+  {
    "name": "Amos Goldbaum",
    "picks": {
     "ATL": {
@@ -1799,11 +1966,11 @@
    "on_pace": 10,
    "points": 0,
    "projected": 11,
-   "rank": 8
+   "rank": 9
   }
  ],
  "test_note": null,
- "picks_source": "8 entries from the Google Form",
+ "picks_source": "9 entries from the Google Form",
  "warnings": [],
  "side_bets": [
   {
@@ -1814,8 +1981,8 @@
    "final": false,
    "summary": "Still winless: Golden State Warriors (0-3), Miami Heat (0-3), Milwaukee Bucks (0-3), New Orleans Pelicans (0-3), Brooklyn Nets (0-2), New York Knicks (0-2), Orlando Magic (0-2), Sacramento Kings (0-2).",
    "result": null,
-   "entrants": 5,
-   "pot": 25,
+   "entrants": 6,
+   "pot": 30,
    "winners": [],
    "share": null,
    "groups": [
@@ -1824,7 +1991,8 @@
      "names": [
       "Jason",
       "Eric",
-      "Timothy Won"
+      "Timothy Won",
+      "Maria"
      ],
      "winner": false,
      "status": "still winless (0-2)"
@@ -1855,8 +2023,8 @@
    "final": false,
    "summary": "Closest: Houston Rockets and Philadelphia 76ers with 3 wins.",
    "result": null,
-   "entrants": 6,
-   "pot": 30,
+   "entrants": 7,
+   "pot": 35,
    "winners": [],
    "share": null,
    "groups": [
@@ -1874,7 +2042,8 @@
      "label": "San Antonio Spurs",
      "names": [
       "Amos Goldbaum",
-      "Jon Stich"
+      "Jon Stich",
+      "Maria"
      ],
      "winner": false,
      "status": "1 wins"
@@ -2181,8 +2350,8 @@
    "final": false,
    "summary": "Result to be posted by the commissioner.",
    "result": null,
-   "entrants": 4,
-   "pot": 20,
+   "entrants": 5,
+   "pot": 25,
    "winners": [],
    "share": null,
    "groups": [
@@ -2199,6 +2368,14 @@
      "label": "Indiana Pacers",
      "names": [
       "Eric"
+     ],
+     "winner": false,
+     "status": null
+    },
+    {
+     "label": "Oklahoma City Thunder",
+     "names": [
+      "Maria"
      ],
      "winner": false,
      "status": null
