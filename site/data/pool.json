@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-24T12:39:47+00:00",
- "last_game_date": "2026-10-23",
- "games_played_total": 28,
+ "generated_at": "2026-10-25T01:07:48+00:00",
+ "last_game_date": "2026-10-24",
+ "games_played_total": 29,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -164,6 +164,21 @@
    "picked_under": 2
   },
   {
+   "abbr": "CHA",
+   "name": "Charlotte Hornets",
+   "conf": "East",
+   "w": 2,
+   "l": 1,
+   "line": 37.5,
+   "gp": 3,
+   "remaining": 79,
+   "proj": 54.7,
+   "result": null,
+   "lean": "over",
+   "picked_over": 4,
+   "picked_under": 4
+  },
+  {
    "abbr": "BOS",
    "name": "Boston Celtics",
    "conf": "East",
@@ -177,21 +192,6 @@
    "lean": "under",
    "picked_over": 5,
    "picked_under": 3
-  },
-  {
-   "abbr": "CHA",
-   "name": "Charlotte Hornets",
-   "conf": "East",
-   "w": 1,
-   "l": 1,
-   "line": 37.5,
-   "gp": 2,
-   "remaining": 80,
-   "proj": 41.0,
-   "result": null,
-   "lean": "over",
-   "picked_over": 4,
-   "picked_under": 4
   },
   {
    "abbr": "CHI",
@@ -359,21 +359,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "MIA",
-   "name": "Miami Heat",
-   "conf": "East",
-   "w": 0,
-   "l": 2,
-   "line": 45.5,
-   "gp": 2,
-   "remaining": 80,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 2
-  },
-  {
    "abbr": "MIL",
    "name": "Milwaukee Bucks",
    "conf": "East",
@@ -462,6 +447,21 @@
    "lean": "under",
    "picked_over": 4,
    "picked_under": 4
+  },
+  {
+   "abbr": "MIA",
+   "name": "Miami Heat",
+   "conf": "East",
+   "w": 0,
+   "l": 3,
+   "line": 45.5,
+   "gp": 3,
+   "remaining": 79,
+   "proj": 0.0,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 2
   }
  ],
  "players": [
@@ -1812,7 +1812,7 @@
    "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
    "automatic": true,
    "final": false,
-   "summary": "Still winless: Golden State Warriors (0-2), Miami Heat (0-2), Milwaukee Bucks (0-2), New Orleans Pelicans (0-2), New York Knicks (0-2), Orlando Magic (0-2), Sacramento Kings (0-2), San Antonio Spurs (0-2), Brooklyn Nets (0-1), Cleveland Cavaliers (0-1), Denver Nuggets (0-1), Phoenix Suns (0-1).",
+   "summary": "Still winless: Miami Heat (0-3), Golden State Warriors (0-2), Milwaukee Bucks (0-2), New Orleans Pelicans (0-2), New York Knicks (0-2), Orlando Magic (0-2), Sacramento Kings (0-2), San Antonio Spurs (0-2), Brooklyn Nets (0-1), Cleveland Cavaliers (0-1), Denver Nuggets (0-1), Phoenix Suns (0-1).",
    "result": null,
    "entrants": 5,
    "pot": 25,
@@ -1853,7 +1853,7 @@
    "question": "Who will be the first team to 20 wins?",
    "automatic": true,
    "final": false,
-   "summary": "Closest: Atlanta Hawks, Detroit Pistons, Houston Rockets, Los Angeles Lakers, Memphis Grizzlies, Minnesota Timberwolves, Oklahoma City Thunder, Philadelphia 76ers, Portland Trail Blazers and Toronto Raptors with 2 wins.",
+   "summary": "Closest: Atlanta Hawks, Charlotte Hornets, Detroit Pistons, Houston Rockets, Los Angeles Lakers, Memphis Grizzlies, Minnesota Timberwolves, Oklahoma City Thunder, Philadelphia 76ers, Portland Trail Blazers and Toronto Raptors with 2 wins.",
    "result": null,
    "entrants": 6,
    "pot": 30,
