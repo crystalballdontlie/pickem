@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-26T03:14:12+00:00",
+ "generated_at": "2026-10-26T05:10:59+00:00",
  "last_game_date": "2026-10-25",
- "games_played_total": 42,
+ "games_played_total": 43,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -62,11 +62,11 @@
    "abbr": "MEM",
    "name": "Memphis Grizzlies",
    "conf": "West",
-   "w": 2,
+   "w": 3,
    "l": 0,
    "line": 29.5,
-   "gp": 2,
-   "remaining": 80,
+   "gp": 3,
+   "remaining": 79,
    "proj": 82.0,
    "result": null,
    "lean": "over",
@@ -359,21 +359,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "SAC",
-   "name": "Sacramento Kings",
-   "conf": "West",
-   "w": 0,
-   "l": 2,
-   "line": 20.5,
-   "gp": 2,
-   "remaining": 80,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
    "abbr": "BKN",
    "name": "Brooklyn Nets",
    "conf": "East",
@@ -462,6 +447,21 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
+  },
+  {
+   "abbr": "SAC",
+   "name": "Sacramento Kings",
+   "conf": "West",
+   "w": 0,
+   "l": 3,
+   "line": 20.5,
+   "gp": 3,
+   "remaining": 79,
+   "proj": 0.0,
+   "result": null,
+   "lean": "under",
+   "picked_over": 3,
+   "picked_under": 6
   }
  ],
  "players": [
@@ -1979,7 +1979,7 @@
    "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
    "automatic": true,
    "final": false,
-   "summary": "Still winless: Brooklyn Nets (0-3), Golden State Warriors (0-3), Miami Heat (0-3), Milwaukee Bucks (0-3), New Orleans Pelicans (0-3), New York Knicks (0-3), Sacramento Kings (0-2).",
+   "summary": "Still winless: Brooklyn Nets (0-3), Golden State Warriors (0-3), Miami Heat (0-3), Milwaukee Bucks (0-3), New Orleans Pelicans (0-3), New York Knicks (0-3), Sacramento Kings (0-3).",
    "result": null,
    "entrants": 6,
    "pot": 30,
@@ -1995,7 +1995,7 @@
       "Maria"
      ],
      "winner": false,
-     "status": "still winless (0-2)"
+     "status": "still winless (0-3)"
     },
     {
      "label": "Brooklyn Nets",
@@ -2021,7 +2021,7 @@
    "question": "Who will be the first team to 20 wins?",
    "automatic": true,
    "final": false,
-   "summary": "Closest: Detroit Pistons, Houston Rockets, Los Angeles Lakers, Minnesota Timberwolves, Oklahoma City Thunder and Philadelphia 76ers with 3 wins.",
+   "summary": "Closest: Detroit Pistons, Houston Rockets, Los Angeles Lakers, Memphis Grizzlies, Minnesota Timberwolves, Oklahoma City Thunder and Philadelphia 76ers with 3 wins.",
    "result": null,
    "entrants": 7,
    "pot": 35,
