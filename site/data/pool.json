@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-27T03:14:11+00:00",
+ "generated_at": "2026-10-27T05:11:01+00:00",
  "last_game_date": "2026-10-26",
- "games_played_total": 50,
+ "games_played_total": 52,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -62,11 +62,11 @@
    "abbr": "MEM",
    "name": "Memphis Grizzlies",
    "conf": "West",
-   "w": 3,
+   "w": 4,
    "l": 0,
    "line": 29.5,
-   "gp": 3,
-   "remaining": 79,
+   "gp": 4,
+   "remaining": 78,
    "proj": 82.0,
    "result": null,
    "lean": "over",
@@ -194,21 +194,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "DEN",
-   "name": "Denver Nuggets",
-   "conf": "West",
-   "w": 1,
-   "l": 1,
-   "line": 48.5,
-   "gp": 2,
-   "remaining": 80,
-   "proj": 41.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
    "abbr": "ATL",
    "name": "Atlanta Hawks",
    "conf": "East",
@@ -267,6 +252,21 @@
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "DEN",
+   "name": "Denver Nuggets",
+   "conf": "West",
+   "w": 1,
+   "l": 2,
+   "line": 48.5,
+   "gp": 3,
+   "remaining": 79,
+   "proj": 27.3,
+   "result": null,
+   "lean": "under",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "LAC",
@@ -329,21 +329,6 @@
    "picked_under": 5
   },
   {
-   "abbr": "UTA",
-   "name": "Utah Jazz",
-   "conf": "West",
-   "w": 1,
-   "l": 2,
-   "line": 36.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 27.3,
-   "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
    "abbr": "CHI",
    "name": "Chicago Bulls",
    "conf": "East",
@@ -357,6 +342,21 @@
    "lean": "under",
    "picked_over": 3,
    "picked_under": 6
+  },
+  {
+   "abbr": "GSW",
+   "name": "Golden State Warriors",
+   "conf": "West",
+   "w": 1,
+   "l": 3,
+   "line": 36.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 20.5,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "MIL",
@@ -374,6 +374,21 @@
    "picked_under": 7
   },
   {
+   "abbr": "UTA",
+   "name": "Utah Jazz",
+   "conf": "West",
+   "w": 1,
+   "l": 3,
+   "line": 36.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 20.5,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
+  },
+  {
    "abbr": "BKN",
    "name": "Brooklyn Nets",
    "conf": "East",
@@ -387,21 +402,6 @@
    "lean": "under",
    "picked_over": 2,
    "picked_under": 7
-  },
-  {
-   "abbr": "GSW",
-   "name": "Golden State Warriors",
-   "conf": "West",
-   "w": 0,
-   "l": 3,
-   "line": 36.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
   },
   {
    "abbr": "NOP",
@@ -1979,7 +1979,7 @@
    "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
    "automatic": true,
    "final": false,
-   "summary": "Still winless: Miami Heat (0-4), Brooklyn Nets (0-3), Golden State Warriors (0-3), New Orleans Pelicans (0-3), New York Knicks (0-3), Sacramento Kings (0-3).",
+   "summary": "Still winless: Miami Heat (0-4), Brooklyn Nets (0-3), New Orleans Pelicans (0-3), New York Knicks (0-3), Sacramento Kings (0-3).",
    "result": null,
    "entrants": 6,
    "pot": 30,
@@ -2021,7 +2021,7 @@
    "question": "Who will be the first team to 20 wins?",
    "automatic": true,
    "final": false,
-   "summary": "Closest: Houston Rockets and Oklahoma City Thunder with 4 wins.",
+   "summary": "Closest: Houston Rockets, Memphis Grizzlies and Oklahoma City Thunder with 4 wins.",
    "result": null,
    "entrants": 7,
    "pot": 35,
