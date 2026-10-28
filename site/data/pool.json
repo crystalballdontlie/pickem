@@ -4,30 +4,15 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-28T01:07:47+00:00",
- "last_game_date": "2026-10-26",
- "games_played_total": 52,
+ "generated_at": "2026-10-28T03:14:12+00:00",
+ "last_game_date": "2026-10-27",
+ "games_played_total": 55,
  "check": {
   "status": "match",
   "mismatches": [],
   "recent": []
  },
  "teams": [
-  {
-   "abbr": "DET",
-   "name": "Detroit Pistons",
-   "conf": "East",
-   "w": 3,
-   "l": 0,
-   "line": 48.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 82.0,
-   "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
-  },
   {
    "abbr": "HOU",
    "name": "Houston Rockets",
@@ -104,6 +89,21 @@
    "picked_under": 5
   },
   {
+   "abbr": "BOS",
+   "name": "Boston Celtics",
+   "conf": "East",
+   "w": 3,
+   "l": 1,
+   "line": 51.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 61.5,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
    "abbr": "CHA",
    "name": "Charlotte Hornets",
    "conf": "East",
@@ -117,6 +117,21 @@
    "lean": "over",
    "picked_over": 5,
    "picked_under": 4
+  },
+  {
+   "abbr": "DET",
+   "name": "Detroit Pistons",
+   "conf": "East",
+   "w": 3,
+   "l": 1,
+   "line": 48.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 61.5,
+   "result": null,
+   "lean": "over",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "MIN",
@@ -143,21 +158,6 @@
    "gp": 4,
    "remaining": 78,
    "proj": 61.5,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
-   "abbr": "BOS",
-   "name": "Boston Celtics",
-   "conf": "East",
-   "w": 2,
-   "l": 1,
-   "line": 51.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 54.7,
    "result": null,
    "lean": "over",
    "picked_over": 5,
@@ -239,6 +239,21 @@
    "picked_under": 2
   },
   {
+   "abbr": "SAS",
+   "name": "San Antonio Spurs",
+   "conf": "West",
+   "w": 2,
+   "l": 2,
+   "line": 60.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 41.0,
+   "result": null,
+   "lean": "under",
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
    "abbr": "WAS",
    "name": "Washington Wizards",
    "conf": "East",
@@ -314,21 +329,6 @@
    "picked_under": 6
   },
   {
-   "abbr": "SAS",
-   "name": "San Antonio Spurs",
-   "conf": "West",
-   "w": 1,
-   "l": 2,
-   "line": 60.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 27.3,
-   "result": null,
-   "lean": "under",
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
    "abbr": "CHI",
    "name": "Chicago Bulls",
    "conf": "East",
@@ -374,6 +374,21 @@
    "picked_under": 7
   },
   {
+   "abbr": "NYK",
+   "name": "New York Knicks",
+   "conf": "East",
+   "w": 1,
+   "l": 3,
+   "line": 52.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 20.5,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
+  },
+  {
    "abbr": "UTA",
    "name": "Utah Jazz",
    "conf": "West",
@@ -387,21 +402,6 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
-  },
-  {
-   "abbr": "BKN",
-   "name": "Brooklyn Nets",
-   "conf": "East",
-   "w": 0,
-   "l": 3,
-   "line": 24.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 2,
-   "picked_under": 7
   },
   {
    "abbr": "NOP",
@@ -419,34 +419,19 @@
    "picked_under": 4
   },
   {
-   "abbr": "NYK",
-   "name": "New York Knicks",
+   "abbr": "BKN",
+   "name": "Brooklyn Nets",
    "conf": "East",
    "w": 0,
-   "l": 3,
-   "line": 52.5,
-   "gp": 3,
-   "remaining": 79,
+   "l": 4,
+   "line": 24.5,
+   "gp": 4,
+   "remaining": 78,
    "proj": 0.0,
    "result": null,
    "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
-   "abbr": "SAC",
-   "name": "Sacramento Kings",
-   "conf": "West",
-   "w": 0,
-   "l": 3,
-   "line": 20.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 3,
-   "picked_under": 6
+   "picked_over": 2,
+   "picked_under": 7
   },
   {
    "abbr": "MIA",
@@ -462,6 +447,21 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
+  },
+  {
+   "abbr": "SAC",
+   "name": "Sacramento Kings",
+   "conf": "West",
+   "w": 0,
+   "l": 4,
+   "line": 20.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 0.0,
+   "result": null,
+   "lean": "under",
+   "picked_over": 3,
+   "picked_under": 6
   }
  ],
  "players": [
@@ -1979,7 +1979,7 @@
    "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
    "automatic": true,
    "final": false,
-   "summary": "Still winless: Miami Heat (0-4), Brooklyn Nets (0-3), New Orleans Pelicans (0-3), New York Knicks (0-3), Sacramento Kings (0-3).",
+   "summary": "Still winless: Brooklyn Nets (0-4), Miami Heat (0-4), Sacramento Kings (0-4), New Orleans Pelicans (0-3).",
    "result": null,
    "entrants": 6,
    "pot": 30,
@@ -1995,7 +1995,7 @@
       "Maria"
      ],
      "winner": false,
-     "status": "still winless (0-3)"
+     "status": "still winless (0-4)"
     },
     {
      "label": "Brooklyn Nets",
@@ -2003,7 +2003,7 @@
       "Monta Ellis (Alex)"
      ],
      "winner": false,
-     "status": "still winless (0-3)"
+     "status": "still winless (0-4)"
     },
     {
      "label": "New Orleans Pelicans",
@@ -2046,7 +2046,7 @@
       "Maria"
      ],
      "winner": false,
-     "status": "1 wins"
+     "status": "2 wins"
     },
     {
      "label": "Minnesota Timberwolves",
