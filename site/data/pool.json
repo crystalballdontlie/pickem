@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-10-29T03:14:14+00:00",
+ "generated_at": "2026-10-29T05:10:58+00:00",
  "last_game_date": "2026-10-28",
- "games_played_total": 65,
+ "games_played_total": 68,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -44,21 +44,6 @@
    "picked_under": 5
   },
   {
-   "abbr": "OKC",
-   "name": "Oklahoma City Thunder",
-   "conf": "West",
-   "w": 4,
-   "l": 0,
-   "line": 62.5,
-   "gp": 4,
-   "remaining": 78,
-   "proj": 82.0,
-   "result": null,
-   "lean": "over",
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
    "abbr": "POR",
    "name": "Portland Trail Blazers",
    "conf": "West",
@@ -87,6 +72,36 @@
    "lean": "over",
    "picked_over": 6,
    "picked_under": 3
+  },
+  {
+   "abbr": "LAL",
+   "name": "Los Angeles Lakers",
+   "conf": "West",
+   "w": 4,
+   "l": 1,
+   "line": 45.5,
+   "gp": 5,
+   "remaining": 77,
+   "proj": 65.6,
+   "result": null,
+   "lean": "over",
+   "picked_over": 3,
+   "picked_under": 6
+  },
+  {
+   "abbr": "OKC",
+   "name": "Oklahoma City Thunder",
+   "conf": "West",
+   "w": 4,
+   "l": 1,
+   "line": 62.5,
+   "gp": 5,
+   "remaining": 77,
+   "proj": 65.6,
+   "result": null,
+   "lean": "over",
+   "picked_over": 4,
+   "picked_under": 5
   },
   {
    "abbr": "PHI",
@@ -134,21 +149,6 @@
    "picked_under": 1
   },
   {
-   "abbr": "LAL",
-   "name": "Los Angeles Lakers",
-   "conf": "West",
-   "w": 3,
-   "l": 1,
-   "line": 45.5,
-   "gp": 4,
-   "remaining": 78,
-   "proj": 61.5,
-   "result": null,
-   "lean": "over",
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
    "abbr": "TOR",
    "name": "Toronto Raptors",
    "conf": "East",
@@ -179,6 +179,21 @@
    "picked_under": 4
   },
   {
+   "abbr": "DAL",
+   "name": "Dallas Mavericks",
+   "conf": "West",
+   "w": 3,
+   "l": 2,
+   "line": 33.5,
+   "gp": 5,
+   "remaining": 77,
+   "proj": 49.2,
+   "result": null,
+   "lean": "over",
+   "picked_over": 6,
+   "picked_under": 3
+  },
+  {
    "abbr": "MIN",
    "name": "Minnesota Timberwolves",
    "conf": "West",
@@ -194,19 +209,19 @@
    "picked_under": 4
   },
   {
-   "abbr": "DAL",
-   "name": "Dallas Mavericks",
+   "abbr": "SAS",
+   "name": "San Antonio Spurs",
    "conf": "West",
-   "w": 2,
+   "w": 3,
    "l": 2,
-   "line": 33.5,
-   "gp": 4,
-   "remaining": 78,
-   "proj": 41.0,
+   "line": 60.5,
+   "gp": 5,
+   "remaining": 77,
+   "proj": 49.2,
    "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
+   "lean": "under",
+   "picked_over": 4,
+   "picked_under": 5
   },
   {
    "abbr": "DEN",
@@ -222,21 +237,6 @@
    "lean": "under",
    "picked_over": 5,
    "picked_under": 4
-  },
-  {
-   "abbr": "SAS",
-   "name": "San Antonio Spurs",
-   "conf": "West",
-   "w": 2,
-   "l": 2,
-   "line": 60.5,
-   "gp": 4,
-   "remaining": 78,
-   "proj": 41.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 4,
-   "picked_under": 5
   },
   {
    "abbr": "ATL",
@@ -314,21 +314,6 @@
    "picked_under": 5
   },
   {
-   "abbr": "LAC",
-   "name": "LA Clippers",
-   "conf": "West",
-   "w": 1,
-   "l": 2,
-   "line": 28.5,
-   "gp": 3,
-   "remaining": 79,
-   "proj": 27.3,
-   "result": null,
-   "lean": "under",
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
    "abbr": "PHX",
    "name": "Phoenix Suns",
    "conf": "West",
@@ -344,27 +329,27 @@
    "picked_under": 6
   },
   {
+   "abbr": "LAC",
+   "name": "LA Clippers",
+   "conf": "West",
+   "w": 1,
+   "l": 3,
+   "line": 28.5,
+   "gp": 4,
+   "remaining": 78,
+   "proj": 20.5,
+   "result": null,
+   "lean": "under",
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
    "abbr": "ORL",
    "name": "Orlando Magic",
    "conf": "East",
    "w": 1,
    "l": 3,
    "line": 43.5,
-   "gp": 4,
-   "remaining": 78,
-   "proj": 20.5,
-   "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
-   "abbr": "UTA",
-   "name": "Utah Jazz",
-   "conf": "West",
-   "w": 1,
-   "l": 3,
-   "line": 36.5,
    "gp": 4,
    "remaining": 78,
    "proj": 20.5,
@@ -417,6 +402,21 @@
    "lean": "under",
    "picked_over": 2,
    "picked_under": 7
+  },
+  {
+   "abbr": "UTA",
+   "name": "Utah Jazz",
+   "conf": "West",
+   "w": 1,
+   "l": 4,
+   "line": 36.5,
+   "gp": 5,
+   "remaining": 77,
+   "proj": 16.4,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "BKN",
@@ -2046,7 +2046,7 @@
       "Maria"
      ],
      "winner": false,
-     "status": "2 wins"
+     "status": "3 wins"
     },
     {
      "label": "Minnesota Timberwolves",
