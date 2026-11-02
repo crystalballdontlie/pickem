@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-01T15:59:26+00:00",
- "last_game_date": "2026-10-31",
- "games_played_total": 88,
+ "generated_at": "2026-11-02T02:07:48+00:00",
+ "last_game_date": "2026-11-01",
+ "games_played_total": 90,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -59,6 +59,21 @@
    "picked_under": 4
   },
   {
+   "abbr": "BOS",
+   "name": "Boston Celtics",
+   "conf": "East",
+   "w": 5,
+   "l": 1,
+   "line": 51.5,
+   "gp": 6,
+   "remaining": 76,
+   "proj": 68.3,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
    "abbr": "DET",
    "name": "Detroit Pistons",
    "conf": "East",
@@ -72,21 +87,6 @@
    "lean": "over",
    "picked_over": 6,
    "picked_under": 3
-  },
-  {
-   "abbr": "BOS",
-   "name": "Boston Celtics",
-   "conf": "East",
-   "w": 4,
-   "l": 1,
-   "line": 51.5,
-   "gp": 5,
-   "remaining": 77,
-   "proj": 65.6,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
   },
   {
    "abbr": "POR",
@@ -284,36 +284,6 @@
    "picked_under": 4
   },
   {
-   "abbr": "ORL",
-   "name": "Orlando Magic",
-   "conf": "East",
-   "w": 2,
-   "l": 3,
-   "line": 43.5,
-   "gp": 5,
-   "remaining": 77,
-   "proj": 32.8,
-   "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
-   "abbr": "IND",
-   "name": "Indiana Pacers",
-   "conf": "East",
-   "w": 2,
-   "l": 4,
-   "line": 44.5,
-   "gp": 6,
-   "remaining": 76,
-   "proj": 27.3,
-   "result": null,
-   "lean": "under",
-   "picked_over": 7,
-   "picked_under": 2
-  },
-  {
    "abbr": "MIA",
    "name": "Miami Heat",
    "conf": "East",
@@ -359,6 +329,36 @@
    "picked_under": 3
   },
   {
+   "abbr": "ORL",
+   "name": "Orlando Magic",
+   "conf": "East",
+   "w": 2,
+   "l": 4,
+   "line": 43.5,
+   "gp": 6,
+   "remaining": 76,
+   "proj": 27.3,
+   "result": null,
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
+  },
+  {
+   "abbr": "IND",
+   "name": "Indiana Pacers",
+   "conf": "East",
+   "w": 2,
+   "l": 5,
+   "line": 44.5,
+   "gp": 7,
+   "remaining": 75,
+   "proj": 23.4,
+   "result": null,
+   "lean": "under",
+   "picked_over": 7,
+   "picked_under": 2
+  },
+  {
    "abbr": "PHX",
    "name": "Phoenix Suns",
    "conf": "West",
@@ -387,6 +387,21 @@
    "lean": "under",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "BKN",
+   "name": "Brooklyn Nets",
+   "conf": "East",
+   "w": 1,
+   "l": 5,
+   "line": 24.5,
+   "gp": 6,
+   "remaining": 76,
+   "proj": 13.7,
+   "result": null,
+   "lean": "under",
+   "picked_over": 2,
+   "picked_under": 7
   },
   {
    "abbr": "CHI",
@@ -432,21 +447,6 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
-  },
-  {
-   "abbr": "BKN",
-   "name": "Brooklyn Nets",
-   "conf": "East",
-   "w": 0,
-   "l": 5,
-   "line": 24.5,
-   "gp": 5,
-   "remaining": 77,
-   "proj": 0.0,
-   "result": null,
-   "lean": "under",
-   "picked_over": 2,
-   "picked_under": 7
   },
   {
    "abbr": "SAC",
@@ -1979,7 +1979,7 @@
    "question": "What team will need the most games to win their first of the season? (i.e. who remains winless the longest)",
    "automatic": true,
    "final": false,
-   "summary": "Still winless: Sacramento Kings (0-6), Brooklyn Nets (0-5).",
+   "summary": "Still winless: Sacramento Kings (0-6).",
    "result": null,
    "entrants": 6,
    "pot": 30,
@@ -2003,7 +2003,7 @@
       "Monta Ellis (Alex)"
      ],
      "winner": false,
-     "status": "still winless (0-5)"
+     "status": "first win in game 6"
     },
     {
      "label": "New Orleans Pelicans",
