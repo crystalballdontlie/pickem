@@ -4,30 +4,15 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-07T02:07:50+00:00",
- "last_game_date": "2026-11-05",
- "games_played_total": 123,
+ "generated_at": "2026-11-07T04:14:10+00:00",
+ "last_game_date": "2026-11-06",
+ "games_played_total": 130,
  "check": {
   "status": "match",
   "mismatches": [],
   "recent": []
  },
  "teams": [
-  {
-   "abbr": "PHI",
-   "name": "Philadelphia 76ers",
-   "conf": "East",
-   "w": 8,
-   "l": 1,
-   "line": 50.5,
-   "gp": 9,
-   "remaining": 73,
-   "proj": 72.9,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
-  },
   {
    "abbr": "POR",
    "name": "Portland Trail Blazers",
@@ -42,6 +27,36 @@
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "PHI",
+   "name": "Philadelphia 76ers",
+   "conf": "East",
+   "w": 8,
+   "l": 2,
+   "line": 50.5,
+   "gp": 10,
+   "remaining": 72,
+   "proj": 65.6,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
+   "abbr": "BOS",
+   "name": "Boston Celtics",
+   "conf": "East",
+   "w": 7,
+   "l": 2,
+   "line": 51.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 63.8,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "HOU",
@@ -74,19 +89,19 @@
    "picked_under": 6
   },
   {
-   "abbr": "BOS",
-   "name": "Boston Celtics",
-   "conf": "East",
-   "w": 6,
+   "abbr": "OKC",
+   "name": "Oklahoma City Thunder",
+   "conf": "West",
+   "w": 7,
    "l": 2,
-   "line": 51.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 61.5,
+   "line": 62.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 63.8,
    "result": null,
    "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
+   "picked_over": 4,
+   "picked_under": 5
   },
   {
    "abbr": "DET",
@@ -104,36 +119,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "MEM",
-   "name": "Memphis Grizzlies",
-   "conf": "West",
-   "w": 6,
-   "l": 2,
-   "line": 29.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 61.5,
-   "result": null,
-   "lean": "over",
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
-   "abbr": "OKC",
-   "name": "Oklahoma City Thunder",
-   "conf": "West",
-   "w": 6,
-   "l": 2,
-   "line": 62.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 61.5,
-   "result": null,
-   "lean": "under",
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
    "abbr": "SAS",
    "name": "San Antonio Spurs",
    "conf": "West",
@@ -147,6 +132,21 @@
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "MIN",
+   "name": "Minnesota Timberwolves",
+   "conf": "West",
+   "w": 7,
+   "l": 3,
+   "line": 48.5,
+   "gp": 10,
+   "remaining": 72,
+   "proj": 57.4,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "GSW",
@@ -164,15 +164,30 @@
    "picked_under": 3
   },
   {
-   "abbr": "MIN",
-   "name": "Minnesota Timberwolves",
+   "abbr": "MEM",
+   "name": "Memphis Grizzlies",
    "conf": "West",
    "w": 6,
    "l": 3,
-   "line": 48.5,
+   "line": 29.5,
    "gp": 9,
    "remaining": 73,
    "proj": 54.7,
+   "result": null,
+   "lean": "over",
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
+   "abbr": "ATL",
+   "name": "Atlanta Hawks",
+   "conf": "East",
+   "w": 6,
+   "l": 4,
+   "line": 43.5,
+   "gp": 10,
+   "remaining": 72,
+   "proj": 49.2,
    "result": null,
    "lean": "over",
    "picked_over": 5,
@@ -194,30 +209,15 @@
    "picked_under": 4
   },
   {
-   "abbr": "ATL",
-   "name": "Atlanta Hawks",
-   "conf": "East",
-   "w": 5,
-   "l": 4,
-   "line": 43.5,
-   "gp": 9,
-   "remaining": 73,
-   "proj": 45.6,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
    "abbr": "CLE",
    "name": "Cleveland Cavaliers",
    "conf": "East",
-   "w": 4,
+   "w": 5,
    "l": 4,
    "line": 47.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 41.0,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 45.6,
    "result": null,
    "lean": "under",
    "picked_over": 8,
@@ -227,31 +227,31 @@
    "abbr": "DAL",
    "name": "Dallas Mavericks",
    "conf": "West",
-   "w": 4,
+   "w": 5,
    "l": 4,
    "line": 33.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 41.0,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 45.6,
    "result": null,
    "lean": "over",
    "picked_over": 6,
    "picked_under": 3
   },
   {
-   "abbr": "NOP",
-   "name": "New Orleans Pelicans",
-   "conf": "West",
-   "w": 4,
+   "abbr": "TOR",
+   "name": "Toronto Raptors",
+   "conf": "East",
+   "w": 5,
    "l": 4,
-   "line": 28.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 41.0,
+   "line": 46.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 45.6,
    "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
+   "lean": "under",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "NYK",
@@ -269,49 +269,34 @@
    "picked_under": 3
   },
   {
-   "abbr": "TOR",
-   "name": "Toronto Raptors",
-   "conf": "East",
+   "abbr": "NOP",
+   "name": "New Orleans Pelicans",
+   "conf": "West",
    "w": 4,
-   "l": 4,
-   "line": 46.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 41.0,
+   "l": 5,
+   "line": 28.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 36.4,
    "result": null,
-   "lean": "under",
-   "picked_over": 6,
-   "picked_under": 3
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "WAS",
    "name": "Washington Wizards",
    "conf": "East",
    "w": 4,
-   "l": 4,
+   "l": 5,
    "line": 34.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 41.0,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 36.4,
    "result": null,
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "CHA",
-   "name": "Charlotte Hornets",
-   "conf": "East",
-   "w": 3,
-   "l": 6,
-   "line": 37.5,
-   "gp": 9,
-   "remaining": 73,
-   "proj": 27.3,
-   "result": null,
-   "lean": "under",
-   "picked_over": 5,
-   "picked_under": 4
   },
   {
    "abbr": "IND",
@@ -342,6 +327,21 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
+  },
+  {
+   "abbr": "CHA",
+   "name": "Charlotte Hornets",
+   "conf": "East",
+   "w": 3,
+   "l": 7,
+   "line": 37.5,
+   "gp": 10,
+   "remaining": 72,
+   "proj": 24.6,
+   "result": null,
+   "lean": "under",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "PHX",
@@ -419,21 +419,6 @@
    "picked_under": 5
   },
   {
-   "abbr": "MIL",
-   "name": "Milwaukee Bucks",
-   "conf": "East",
-   "w": 1,
-   "l": 7,
-   "line": 25.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 10.2,
-   "result": null,
-   "lean": "under",
-   "picked_over": 2,
-   "picked_under": 7
-  },
-  {
    "abbr": "SAC",
    "name": "Sacramento Kings",
    "conf": "West",
@@ -449,15 +434,30 @@
    "picked_under": 6
   },
   {
+   "abbr": "MIL",
+   "name": "Milwaukee Bucks",
+   "conf": "East",
+   "w": 1,
+   "l": 8,
+   "line": 25.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 9.1,
+   "result": null,
+   "lean": "under",
+   "picked_over": 2,
+   "picked_under": 7
+  },
+  {
    "abbr": "UTA",
    "name": "Utah Jazz",
    "conf": "West",
    "w": 1,
-   "l": 7,
+   "l": 8,
    "line": 36.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 10.2,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 9.1,
    "result": null,
    "lean": "under",
    "picked_over": 6,
@@ -465,173 +465,6 @@
   }
  ],
  "players": [
-  {
-   "name": "Jon Stich",
-   "picks": {
-    "ATL": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "BOS": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "BKN": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CHA": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CHI": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CLE": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DAL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "DEN": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DET": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": true
-    },
-    "GSW": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "HOU": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "IND": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "LAC": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "LAL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": true
-    },
-    "MEM": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIA": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIL": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIN": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "NOP": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "NYK": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "OKC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "ORL": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "PHI": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "PHX": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "POR": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "SAC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": true
-    },
-    "SAS": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "TOR": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "UTA": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "WAS": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    }
-   },
-   "locks": [
-    "DET",
-    "LAL",
-    "SAC"
-   ],
-   "won": 0,
-   "lost": 0,
-   "pushes": 0,
-   "on_pace": 17,
-   "points": 0,
-   "projected": 20,
-   "rank": 1
-  },
   {
    "name": "Blake",
    "picks": {
@@ -737,7 +570,7 @@
     },
     "OKC": {
      "pick": "over",
-     "state": "off_pace",
+     "state": "on_pace",
      "lock": false
     },
     "ORL": {
@@ -794,10 +627,10 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
-   "on_pace": 17,
+   "on_pace": 18,
    "points": 0,
-   "projected": 19,
-   "rank": 2
+   "projected": 20,
+   "rank": 1
   },
   {
    "name": "Eric",
@@ -904,7 +737,7 @@
     },
     "OKC": {
      "pick": "over",
-     "state": "off_pace",
+     "state": "on_pace",
      "lock": false
     },
     "ORL": {
@@ -961,10 +794,177 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
-   "on_pace": 18,
+   "on_pace": 19,
+   "points": 0,
+   "projected": 20,
+   "rank": 1
+  },
+  {
+   "name": "Jon Stich",
+   "picks": {
+    "ATL": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "BOS": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "BKN": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CHA": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CHI": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CLE": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DAL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "DEN": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DET": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": true
+    },
+    "GSW": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "HOU": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "IND": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "LAC": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "LAL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": true
+    },
+    "MEM": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIA": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIN": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "NOP": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "NYK": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "OKC": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "ORL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "PHI": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "PHX": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "POR": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "SAC": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": true
+    },
+    "SAS": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "TOR": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "UTA": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "WAS": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    }
+   },
+   "locks": [
+    "DET",
+    "LAL",
+    "SAC"
+   ],
+   "won": 0,
+   "lost": 0,
+   "pushes": 0,
+   "on_pace": 16,
    "points": 0,
    "projected": 19,
-   "rank": 2
+   "rank": 3
   },
   {
    "name": "Jason",
@@ -1071,7 +1071,7 @@
     },
     "OKC": {
      "pick": "under",
-     "state": "on_pace",
+     "state": "off_pace",
      "lock": true
     },
     "ORL": {
@@ -1128,344 +1128,10 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
-   "on_pace": 16,
-   "points": 0,
-   "projected": 19,
-   "rank": 2
-  },
-  {
-   "name": "Timothy Won",
-   "picks": {
-    "ATL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "BOS": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "BKN": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": true
-    },
-    "CHA": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CHI": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CLE": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DAL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "DEN": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DET": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "GSW": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "HOU": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "IND": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "LAC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "LAL": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MEM": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIA": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIL": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": true
-    },
-    "MIN": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "NOP": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "NYK": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "OKC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "ORL": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "PHI": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "PHX": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "POR": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "SAC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": true
-    },
-    "SAS": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "TOR": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "UTA": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "WAS": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    }
-   },
-   "locks": [
-    "BKN",
-    "MIL",
-    "SAC"
-   ],
-   "won": 0,
-   "lost": 0,
-   "pushes": 0,
    "on_pace": 15,
    "points": 0,
-   "projected": 18,
-   "rank": 5
-  },
-  {
-   "name": "Amos Goldbaum",
-   "picks": {
-    "ATL": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "BOS": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "BKN": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "CHA": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "CHI": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": true
-    },
-    "CLE": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DAL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": true
-    },
-    "DEN": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "DET": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "GSW": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "HOU": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "IND": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "LAC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "LAL": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "MEM": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": false
-    },
-    "MIA": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "MIL": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "MIN": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "NOP": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "NYK": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "OKC": {
-     "pick": "under",
-     "state": "on_pace",
-     "lock": false
-    },
-    "ORL": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "PHI": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "PHX": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "POR": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    },
-    "SAC": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "SAS": {
-     "pick": "over",
-     "state": "on_pace",
-     "lock": true
-    },
-    "TOR": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "UTA": {
-     "pick": "over",
-     "state": "off_pace",
-     "lock": false
-    },
-    "WAS": {
-     "pick": "under",
-     "state": "off_pace",
-     "lock": false
-    }
-   },
-   "locks": [
-    "CHI",
-    "DAL",
-    "SAS"
-   ],
-   "won": 0,
-   "lost": 0,
-   "pushes": 0,
-   "on_pace": 13,
-   "points": 0,
-   "projected": 16,
-   "rank": 6
+   "projected": 17,
+   "rank": 4
   },
   {
    "name": "Lisa",
@@ -1572,7 +1238,7 @@
     },
     "OKC": {
      "pick": "over",
-     "state": "off_pace",
+     "state": "on_pace",
      "lock": false
     },
     "ORL": {
@@ -1629,10 +1295,177 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
+   "on_pace": 15,
+   "points": 0,
+   "projected": 17,
+   "rank": 4
+  },
+  {
+   "name": "Timothy Won",
+   "picks": {
+    "ATL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "BOS": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "BKN": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": true
+    },
+    "CHA": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CHI": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CLE": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DAL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "DEN": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DET": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "GSW": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "HOU": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "IND": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "LAC": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "LAL": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MEM": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIA": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIL": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": true
+    },
+    "MIN": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "NOP": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "NYK": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "OKC": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "ORL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "PHI": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "PHX": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "POR": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "SAC": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": true
+    },
+    "SAS": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "TOR": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "UTA": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "WAS": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    }
+   },
+   "locks": [
+    "BKN",
+    "MIL",
+    "SAC"
+   ],
+   "won": 0,
+   "lost": 0,
+   "pushes": 0,
    "on_pace": 14,
    "points": 0,
-   "projected": 16,
-   "rank": 6
+   "projected": 17,
+   "rank": 4
   },
   {
    "name": "Monta Ellis (Alex)",
@@ -1739,7 +1572,7 @@
     },
     "OKC": {
      "pick": "over",
-     "state": "off_pace",
+     "state": "on_pace",
      "lock": false
     },
     "ORL": {
@@ -1796,7 +1629,174 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
-   "on_pace": 13,
+   "on_pace": 14,
+   "points": 0,
+   "projected": 16,
+   "rank": 7
+  },
+  {
+   "name": "Amos Goldbaum",
+   "picks": {
+    "ATL": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "BOS": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "BKN": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "CHA": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "CHI": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": true
+    },
+    "CLE": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DAL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": true
+    },
+    "DEN": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "DET": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "GSW": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "HOU": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "IND": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "LAC": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "LAL": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "MEM": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": false
+    },
+    "MIA": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "MIL": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "MIN": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "NOP": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "NYK": {
+     "pick": "under",
+     "state": "on_pace",
+     "lock": false
+    },
+    "OKC": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "ORL": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "PHI": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "PHX": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "POR": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    },
+    "SAC": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "SAS": {
+     "pick": "over",
+     "state": "on_pace",
+     "lock": true
+    },
+    "TOR": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "UTA": {
+     "pick": "over",
+     "state": "off_pace",
+     "lock": false
+    },
+    "WAS": {
+     "pick": "under",
+     "state": "off_pace",
+     "lock": false
+    }
+   },
+   "locks": [
+    "CHI",
+    "DAL",
+    "SAS"
+   ],
+   "won": 0,
+   "lost": 0,
+   "pushes": 0,
+   "on_pace": 12,
    "points": 0,
    "projected": 15,
    "rank": 8
@@ -1906,7 +1906,7 @@
     },
     "OKC": {
      "pick": "under",
-     "state": "on_pace",
+     "state": "off_pace",
      "lock": false
     },
     "ORL": {
@@ -1963,9 +1963,9 @@
    "won": 0,
    "lost": 0,
    "pushes": 0,
-   "on_pace": 12,
+   "on_pace": 11,
    "points": 0,
-   "projected": 13,
+   "projected": 12,
    "rank": 9
   }
  ],
@@ -2041,7 +2041,7 @@
       "Monta Ellis (Alex)"
      ],
      "winner": false,
-     "status": "6 wins"
+     "status": "7 wins"
     },
     {
      "label": "San Antonio Spurs",
@@ -2059,7 +2059,7 @@
       "Jason"
      ],
      "winner": false,
-     "status": "6 wins"
+     "status": "7 wins"
     }
    ]
   },
