@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-08T15:57:25+00:00",
- "last_game_date": "2026-11-07",
- "games_played_total": 139,
+ "generated_at": "2026-11-09T02:07:49+00:00",
+ "last_game_date": "2026-11-08",
+ "games_played_total": 141,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -17,16 +17,31 @@
    "abbr": "LAL",
    "name": "Los Angeles Lakers",
    "conf": "West",
-   "w": 8,
+   "w": 9,
    "l": 2,
    "line": 45.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 65.6,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 67.1,
    "result": null,
    "lean": "over",
    "picked_over": 3,
    "picked_under": 6
+  },
+  {
+   "abbr": "PHI",
+   "name": "Philadelphia 76ers",
+   "conf": "East",
+   "w": 9,
+   "l": 2,
+   "line": 50.5,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 67.1,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "OKC",
@@ -42,21 +57,6 @@
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "PHI",
-   "name": "Philadelphia 76ers",
-   "conf": "East",
-   "w": 8,
-   "l": 2,
-   "line": 50.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 65.6,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
   },
   {
    "abbr": "SAS",
@@ -87,21 +87,6 @@
    "lean": "over",
    "picked_over": 5,
    "picked_under": 4
-  },
-  {
-   "abbr": "DET",
-   "name": "Detroit Pistons",
-   "conf": "East",
-   "w": 6,
-   "l": 2,
-   "line": 48.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 61.5,
-   "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
   },
   {
    "abbr": "GSW",
@@ -147,6 +132,21 @@
    "lean": "over",
    "picked_over": 5,
    "picked_under": 4
+  },
+  {
+   "abbr": "DET",
+   "name": "Detroit Pistons",
+   "conf": "East",
+   "w": 6,
+   "l": 3,
+   "line": 48.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 54.7,
+   "result": null,
+   "lean": "over",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "MEM",
@@ -389,21 +389,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "CHI",
-   "name": "Chicago Bulls",
-   "conf": "East",
-   "w": 1,
-   "l": 7,
-   "line": 29.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 10.2,
-   "result": null,
-   "lean": "under",
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
    "abbr": "LAC",
    "name": "LA Clippers",
    "conf": "West",
@@ -417,6 +402,21 @@
    "lean": "under",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "CHI",
+   "name": "Chicago Bulls",
+   "conf": "East",
+   "w": 1,
+   "l": 8,
+   "line": 29.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 9.1,
+   "result": null,
+   "lean": "under",
+   "picked_over": 3,
+   "picked_under": 6
   },
   {
    "abbr": "MIL",
@@ -2026,7 +2026,7 @@
    "question": "Who will be the first team to 20 wins?",
    "automatic": true,
    "final": false,
-   "summary": "Closest: Los Angeles Lakers, Oklahoma City Thunder, Philadelphia 76ers and San Antonio Spurs with 8 wins.",
+   "summary": "Closest: Los Angeles Lakers and Philadelphia 76ers with 9 wins.",
    "result": null,
    "entrants": 7,
    "pot": 35,
