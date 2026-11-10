@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-10T04:14:11+00:00",
+ "generated_at": "2026-11-10T06:11:01+00:00",
  "last_game_date": "2026-11-09",
- "games_played_total": 152,
+ "games_played_total": 154,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -44,6 +44,21 @@
    "picked_under": 4
   },
   {
+   "abbr": "SAS",
+   "name": "San Antonio Spurs",
+   "conf": "West",
+   "w": 9,
+   "l": 2,
+   "line": 60.5,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 67.1,
+   "result": null,
+   "lean": "over",
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
    "abbr": "BOS",
    "name": "Boston Celtics",
    "conf": "East",
@@ -74,19 +89,19 @@
    "picked_under": 5
   },
   {
-   "abbr": "SAS",
-   "name": "San Antonio Spurs",
+   "abbr": "GSW",
+   "name": "Golden State Warriors",
    "conf": "West",
    "w": 8,
-   "l": 2,
-   "line": 60.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 65.6,
+   "l": 3,
+   "line": 36.5,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 59.6,
    "result": null,
    "lean": "over",
-   "picked_over": 4,
-   "picked_under": 5
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "HOU",
@@ -125,21 +140,6 @@
    "w": 7,
    "l": 3,
    "line": 48.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 57.4,
-   "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
-   "abbr": "GSW",
-   "name": "Golden State Warriors",
-   "conf": "West",
-   "w": 7,
-   "l": 3,
-   "line": 36.5,
    "gp": 10,
    "remaining": 72,
    "proj": 57.4,
@@ -284,36 +284,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "NOP",
-   "name": "New Orleans Pelicans",
-   "conf": "West",
-   "w": 4,
-   "l": 6,
-   "line": 28.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 32.8,
-   "result": null,
-   "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
-   "abbr": "PHX",
-   "name": "Phoenix Suns",
-   "conf": "West",
-   "w": 3,
-   "l": 5,
-   "line": 39.5,
-   "gp": 8,
-   "remaining": 74,
-   "proj": 30.8,
-   "result": null,
-   "lean": "under",
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
    "abbr": "CHA",
    "name": "Charlotte Hornets",
    "conf": "East",
@@ -325,6 +295,21 @@
    "proj": 29.8,
    "result": null,
    "lean": "under",
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
+   "abbr": "NOP",
+   "name": "New Orleans Pelicans",
+   "conf": "West",
+   "w": 4,
+   "l": 7,
+   "line": 28.5,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 29.8,
+   "result": null,
+   "lean": "over",
    "picked_over": 5,
    "picked_under": 4
   },
@@ -342,6 +327,21 @@
    "lean": "under",
    "picked_over": 4,
    "picked_under": 5
+  },
+  {
+   "abbr": "PHX",
+   "name": "Phoenix Suns",
+   "conf": "West",
+   "w": 3,
+   "l": 6,
+   "line": 39.5,
+   "gp": 9,
+   "remaining": 73,
+   "proj": 27.3,
+   "result": null,
+   "lean": "under",
+   "picked_over": 3,
+   "picked_under": 6
   },
   {
    "abbr": "IND",
@@ -2051,7 +2051,7 @@
       "Maria"
      ],
      "winner": false,
-     "status": "8 wins"
+     "status": "9 wins"
     },
     {
      "label": "Minnesota Timberwolves",
