@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-13T02:07:58+00:00",
- "last_game_date": "2026-11-11",
- "games_played_total": 170,
+ "generated_at": "2026-11-13T04:14:17+00:00",
+ "last_game_date": "2026-11-12",
+ "games_played_total": 173,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -59,6 +59,21 @@
    "picked_under": 5
   },
   {
+   "abbr": "PHI",
+   "name": "Philadelphia 76ers",
+   "conf": "East",
+   "w": 10,
+   "l": 3,
+   "line": 50.5,
+   "gp": 13,
+   "remaining": 69,
+   "proj": 63.1,
+   "result": null,
+   "lean": "over",
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
    "abbr": "HOU",
    "name": "Houston Rockets",
    "conf": "West",
@@ -74,12 +89,12 @@
    "picked_under": 4
   },
   {
-   "abbr": "PHI",
-   "name": "Philadelphia 76ers",
-   "conf": "East",
+   "abbr": "MIN",
+   "name": "Minnesota Timberwolves",
+   "conf": "West",
    "w": 9,
    "l": 3,
-   "line": 50.5,
+   "line": 48.5,
    "gp": 12,
    "remaining": 70,
    "proj": 61.5,
@@ -89,9 +104,9 @@
    "picked_under": 4
   },
   {
-   "abbr": "MIN",
-   "name": "Minnesota Timberwolves",
-   "conf": "West",
+   "abbr": "DET",
+   "name": "Detroit Pistons",
+   "conf": "East",
    "w": 8,
    "l": 3,
    "line": 48.5,
@@ -100,8 +115,8 @@
    "proj": 59.6,
    "result": null,
    "lean": "over",
-   "picked_over": 5,
-   "picked_under": 4
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "POR",
@@ -117,21 +132,6 @@
    "lean": "over",
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "DET",
-   "name": "Detroit Pistons",
-   "conf": "East",
-   "w": 7,
-   "l": 3,
-   "line": 48.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 57.4,
-   "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
   },
   {
    "abbr": "GSW",
@@ -162,21 +162,6 @@
    "lean": "under",
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "DAL",
-   "name": "Dallas Mavericks",
-   "conf": "West",
-   "w": 7,
-   "l": 4,
-   "line": 33.5,
-   "gp": 11,
-   "remaining": 71,
-   "proj": 52.2,
-   "result": null,
-   "lean": "over",
-   "picked_over": 6,
-   "picked_under": 3
   },
   {
    "abbr": "MEM",
@@ -222,6 +207,21 @@
    "lean": "over",
    "picked_over": 5,
    "picked_under": 4
+  },
+  {
+   "abbr": "DAL",
+   "name": "Dallas Mavericks",
+   "conf": "West",
+   "w": 7,
+   "l": 5,
+   "line": 33.5,
+   "gp": 12,
+   "remaining": 70,
+   "proj": 47.8,
+   "result": null,
+   "lean": "over",
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "NYK",
@@ -273,11 +273,11 @@
    "name": "Toronto Raptors",
    "conf": "East",
    "w": 5,
-   "l": 6,
+   "l": 7,
    "line": 46.5,
-   "gp": 11,
-   "remaining": 71,
-   "proj": 37.3,
+   "gp": 12,
+   "remaining": 70,
+   "proj": 34.2,
    "result": null,
    "lean": "under",
    "picked_over": 6,
@@ -363,11 +363,11 @@
    "name": "Washington Wizards",
    "conf": "East",
    "w": 4,
-   "l": 8,
+   "l": 9,
    "line": 34.5,
-   "gp": 12,
-   "remaining": 70,
-   "proj": 27.3,
+   "gp": 13,
+   "remaining": 69,
+   "proj": 25.2,
    "result": null,
    "lean": "under",
    "picked_over": 4,
@@ -2059,7 +2059,7 @@
       "Jason"
      ],
      "winner": false,
-     "status": "8 wins"
+     "status": "9 wins"
     }
    ]
   },
