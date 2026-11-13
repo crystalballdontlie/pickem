@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-13T04:14:17+00:00",
+ "generated_at": "2026-11-13T06:11:00+00:00",
  "last_game_date": "2026-11-12",
- "games_played_total": 173,
+ "games_played_total": 174,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -269,6 +269,21 @@
    "picked_under": 3
   },
   {
+   "abbr": "PHX",
+   "name": "Phoenix Suns",
+   "conf": "West",
+   "w": 5,
+   "l": 6,
+   "line": 39.5,
+   "gp": 11,
+   "remaining": 71,
+   "proj": 37.3,
+   "result": null,
+   "lean": "under",
+   "picked_over": 3,
+   "picked_under": 6
+  },
+  {
    "abbr": "TOR",
    "name": "Toronto Raptors",
    "conf": "East",
@@ -284,36 +299,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "PHX",
-   "name": "Phoenix Suns",
-   "conf": "West",
-   "w": 4,
-   "l": 6,
-   "line": 39.5,
-   "gp": 10,
-   "remaining": 72,
-   "proj": 32.8,
-   "result": null,
-   "lean": "under",
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
-   "abbr": "CHA",
-   "name": "Charlotte Hornets",
-   "conf": "East",
-   "w": 4,
-   "l": 7,
-   "line": 37.5,
-   "gp": 11,
-   "remaining": 71,
-   "proj": 29.8,
-   "result": null,
-   "lean": "under",
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
    "abbr": "ORL",
    "name": "Orlando Magic",
    "conf": "East",
@@ -327,6 +312,21 @@
    "lean": "under",
    "picked_over": 6,
    "picked_under": 3
+  },
+  {
+   "abbr": "CHA",
+   "name": "Charlotte Hornets",
+   "conf": "East",
+   "w": 4,
+   "l": 8,
+   "line": 37.5,
+   "gp": 12,
+   "remaining": 70,
+   "proj": 27.3,
+   "result": null,
+   "lean": "under",
+   "picked_over": 5,
+   "picked_under": 4
   },
   {
    "abbr": "IND",
