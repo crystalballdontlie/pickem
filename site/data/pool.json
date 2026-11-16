@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-16T04:14:53+00:00",
+ "generated_at": "2026-11-16T06:10:59+00:00",
  "last_game_date": "2026-11-15",
- "games_played_total": 196,
+ "games_played_total": 197,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -149,6 +149,21 @@
    "picked_under": 3
   },
   {
+   "abbr": "OKC",
+   "name": "Oklahoma City Thunder",
+   "conf": "West",
+   "w": 9,
+   "l": 5,
+   "line": 62.5,
+   "gp": 14,
+   "remaining": 68,
+   "proj": 52.7,
+   "result": null,
+   "lean": "under",
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
    "abbr": "DEN",
    "name": "Denver Nuggets",
    "conf": "West",
@@ -177,21 +192,6 @@
    "lean": "over",
    "picked_over": 6,
    "picked_under": 3
-  },
-  {
-   "abbr": "OKC",
-   "name": "Oklahoma City Thunder",
-   "conf": "West",
-   "w": 8,
-   "l": 5,
-   "line": 62.5,
-   "gp": 13,
-   "remaining": 69,
-   "proj": 50.5,
-   "result": null,
-   "lean": "under",
-   "picked_over": 4,
-   "picked_under": 5
   },
   {
    "abbr": "ATL",
@@ -423,11 +423,11 @@
    "name": "Sacramento Kings",
    "conf": "West",
    "w": 1,
-   "l": 11,
+   "l": 12,
    "line": 20.5,
-   "gp": 12,
-   "remaining": 70,
-   "proj": 6.8,
+   "gp": 13,
+   "remaining": 69,
+   "proj": 6.3,
    "result": null,
    "lean": "under",
    "picked_over": 3,
@@ -2041,7 +2041,7 @@
       "Monta Ellis (Alex)"
      ],
      "winner": false,
-     "status": "8 wins"
+     "status": "9 wins"
     },
     {
      "label": "San Antonio Spurs",
