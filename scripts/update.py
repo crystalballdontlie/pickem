@@ -677,6 +677,26 @@ def team_outlook(w: int, l: int, line: float | None, n_games: int) -> dict:
     return out
 
 
+def flip_distance(w: int, l: int, line: float | None, n_games: int, outlook: dict) -> dict:
+    """How many straight results against a team's current lean would flip its pace to the
+    other side of the line. 1 means the next game decides which side it's on ("swing")."""
+    out = {"flip_after": None, "flip_on": None, "swing": False}
+    gp = w + l
+    if line is None or not gp or outlook["result"]:
+        return out
+    lean = outlook["lean"]
+    if lean == "even":
+        out.update(flip_after=1, flip_on="either", swing=True)
+        return out
+    remaining = outlook["remaining"]
+    for k in range(1, remaining + 1):
+        pace = (w / (gp + k) if lean == "over" else (w + k) / (gp + k)) * n_games
+        if (pace < line) if lean == "over" else (pace > line):
+            out.update(flip_after=k, flip_on="loss" if lean == "over" else "win", swing=k == 1)
+            break
+    return out
+
+
 def score_pick(pick: str | None, outlook: dict) -> str:
     if not pick:
         return "none"
@@ -695,6 +715,7 @@ def build_payload(config, records, last_date, check, lines, people) -> dict:
     for abbr, (name, conf) in TEAMS.items():
         r = records[abbr]
         o = team_outlook(r["w"], r["l"], lines.get(abbr), n)
+        o.update(flip_distance(r["w"], r["l"], lines.get(abbr), n, o))
         outlooks[abbr] = o
         over_n = sum(1 for p in people if p["picks"].get(abbr) == "over")
         under_n = sum(1 for p in people if p["picks"].get(abbr) == "under")
@@ -712,15 +733,22 @@ def build_payload(config, records, last_date, check, lines, people) -> dict:
         on_pace = sum(s == "on_pace" for s in states.values())
         points = sum(weight[a] for a, s in states.items() if s == "won")
         pace_points = sum(weight[a] for a, s in states.items() if s == "on_pace")
+        # Projected points that tonight's swing games could take away or add.
+        swing_risk = sum(weight[a] for a, s in states.items() if outlooks[a]["swing"] and s == "on_pace")
+        swing_gain = sum(weight[a] for a, s in states.items() if outlooks[a]["swing"] and s in ("off_pace", "even"))
         players.append({
             "name": p["name"],
-            "picks": {a: {"pick": p["picks"].get(a), "state": s, "lock": a in locks} for a, s in states.items()},
+            "picks": {a: {"pick": p["picks"].get(a), "state": s, "lock": a in locks,
+                          "swing": bool(outlooks[a]["swing"] and p["picks"].get(a))} for a, s in states.items()},
             "locks": sorted(locks),
             "won": won, "lost": lost,
             "pushes": sum(s == "push" for s in states.values()),
             "on_pace": on_pace,
             "points": points,
             "projected": points + pace_points,
+            "at_stake": swing_risk + swing_gain,
+            "proj_low": points + pace_points - swing_risk,
+            "proj_high": points + pace_points + swing_gain,
         })
     players.sort(key=lambda x: (-x["projected"], -x["points"], x["lost"], x["name"].lower()))
     rank = 0

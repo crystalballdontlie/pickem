@@ -12,7 +12,7 @@
 :root {
   --bg: #eef0f2; --surface: #ffffff; --ink: #15202b; --muted: #5a6572; --line: #d8dde3;
   --accent: #c4531a; --accent-ink: #ffffff;
-  --won: #1d7a4c; --on: #8cc7a6; --off: #eba8a0; --lost: #b3261e; --even: #c9ced5; --none: transparent;
+  --swing: #a35f00; --swing-bg: #fdf1dc; --won: #1d7a4c; --on: #8cc7a6; --off: #eba8a0; --lost: #b3261e; --even: #c9ced5; --none: transparent;
   --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --body: "Barlow", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -20,11 +20,11 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0f141a; --surface: #171f28; --ink: #e6ebf0; --muted: #98a4b1; --line: #2a3541;
   --accent: #ee7a3c; --accent-ink: #10151b;
-  --won: #3cb378; --on: #2c6b4b; --off: #7a3a35; --lost: #e2584d; --even: #3a4652; color-scheme: dark; } }
+  --swing: #e8a33d; --swing-bg: #33270f; --won: #3cb378; --on: #2c6b4b; --off: #7a3a35; --lost: #e2584d; --even: #3a4652; color-scheme: dark; } }
 :root[data-theme="dark"] {
   --bg: #0f141a; --surface: #171f28; --ink: #e6ebf0; --muted: #98a4b1; --line: #2a3541;
   --accent: #ee7a3c; --accent-ink: #10151b;
-  --won: #3cb378; --on: #2c6b4b; --off: #7a3a35; --lost: #e2584d; --even: #3a4652; color-scheme: dark; }
+  --swing: #e8a33d; --swing-bg: #33270f; --won: #3cb378; --on: #2c6b4b; --off: #7a3a35; --lost: #e2584d; --even: #3a4652; color-scheme: dark; }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -58,6 +58,44 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; border: 1px solid var(--line); }
 
+/* Swing teams: the next game decides which side of the line they're on */
+.swingbar { background: var(--swing-bg); border: 1px solid color-mix(in srgb, var(--swing) 45%, transparent); border-radius: 8px; padding: 10px 14px; display: grid; gap: 8px; }
+.swingbar .head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.swingbar .head b { font: 700 1.05rem var(--display); text-transform: uppercase; letter-spacing: .05em; color: var(--swing); }
+.swingbar .head span { color: var(--muted); font-size: .88rem; }
+.swingchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.swingchip { font: inherit; display: inline-flex; gap: 6px; align-items: baseline; border: 1px solid color-mix(in srgb, var(--swing) 55%, transparent); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 3px 11px; cursor: pointer; font-size: .9rem; }
+.swingchip b { font: 700 1rem var(--display); letter-spacing: .02em; }
+.swingchip small { color: var(--swing); font-weight: 600; }
+.swingchip[aria-expanded="true"] { border-color: var(--swing); box-shadow: 0 0 0 1px var(--swing); }
+.swingchip:focus-visible { outline: 2px solid var(--swing); outline-offset: 2px; }
+.swingdetail { font-size: .9rem; display: grid; gap: 3px; }
+.swingdetail .side { color: var(--muted); }
+.swingdetail .side b { color: var(--ink); }
+/* Pick squares: size and color depth show how firm a pick is.
+   l0 = swing (next game flips it), l1 = close (2-3 results), l2 = firm (4-7), l3 = steady (8+), l4 = settled. */
+.sq { display: block; border-radius: 2px; background: var(--c); width: calc(100% * var(--s)); aspect-ratio: 1; }
+.sq.l0 { --s: .42; } .sq.l1 { --s: .62; } .sq.l2 { --s: .8; } .sq.l3, .sq.l4 { --s: 1; }
+.sq.s-on { --c: color-mix(in srgb, var(--won) var(--p), var(--surface)); }
+.sq.s-off { --c: color-mix(in srgb, var(--lost) var(--p), var(--surface)); }
+.sq.l0 { --p: 30%; } .sq.l1 { --p: 45%; } .sq.l2 { --p: 62%; } .sq.l3 { --p: 80%; }
+.sq.s-won { --c: var(--won); } .sq.s-lost { --c: var(--lost); }
+.sq.s-even, .sq.s-push { --c: var(--even); }
+.sq.s-none { --c: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.sq.l0:not(.s-none) { box-shadow: 0 0 0 1.5px var(--swing); }
+.sizes { display: inline-flex; align-items: center; gap: 4px; }
+.sizes .sq { width: calc(13px * var(--s)); }
+.legend .sq { width: 12px; }
+.sizekey { flex-basis: 100%; }
+.stake { font: 600 .82rem var(--body); color: var(--swing); white-space: nowrap; }
+.who .nameline { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
+.pk.swing { box-shadow: inset 3px 0 0 var(--swing); }
+.pk .flip { color: var(--swing); font-weight: 600; }
+.chip.swing { background: var(--swing-bg); color: var(--swing); border: 1px solid color-mix(in srgb, var(--swing) 50%, transparent); }
+.flipcell { white-space: nowrap; }
+.flipcell.swing { color: var(--swing); font-weight: 600; }
+.track .dot.swing { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--swing); }
+
 /* Leaderboard */
 .board.bare { background: none; border: 0; }
 .board { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
@@ -68,8 +106,8 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .who { min-width: 0; display: grid; gap: 6px; }
 .who .name { font-weight: 600; font-size: 1.05rem; }
 .strip { display: grid; grid-template-columns: repeat(30, minmax(0, 1fr)); gap: 2px; max-width: 420px; }
-.strip i { height: 12px; border-radius: 2px; }
-.strip i.lk, .sw.lk { box-shadow: inset 0 0 0 2px var(--ink); }
+.strip i { aspect-ratio: 1; display: grid; place-items: center; border-radius: 3px; }
+.strip i.lk, .sw.lk { box-shadow: inset 0 0 0 1.5px var(--ink); }
 .pk.lk { border: 2px solid var(--ink); padding: 5px 7px; }
 .pk .lock { white-space: nowrap; font: 600 .75rem var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
 .stat { text-align: right; font: 600 1.25rem var(--display); }
@@ -138,6 +176,7 @@ select { font: inherit; padding: 4px 8px; border-radius: 5px; border: 1px solid 
 footer { color: var(--muted); font-size: .85rem; }
 
 @media (max-width: 640px) {
+  .strip { grid-template-columns: repeat(15, minmax(0, 1fr)); max-width: 230px; }
   .row { grid-template-columns: 2rem minmax(0, 1fr) 3rem 3rem; }
   .row .hide-sm { display: none; }
 }
@@ -165,17 +204,21 @@ footer { color: var(--muted); font-size: .85rem; }
   </nav>
 
   <section id="view-board" style="display:grid; gap:12px">
+    <div class="swingbar" id="swingbar" hidden></div>
     <div class="legend" id="legend">
-      <span><i class="sw won"></i>Won (settled)</span>
-      <span><i class="sw on_pace"></i>On pace</span>
-      <span><i class="sw off_pace"></i>Off pace</span>
-      <span><i class="sw lost"></i>Lost (settled)</span>
+      <span><b class="sq s-won l4"></b>Won (settled)</span>
+      <span><b class="sq s-on l3"></b>Trending your way</span>
+      <span><b class="sq s-off l3"></b>Trending against you</span>
+      <span><b class="sq s-lost l4"></b>Lost (settled)</span>
       <span><i class="sw even"></i>Even or push</span>
       <span><i class="sw lk"></i>Lock (counts double)</span>
+      <span class="sizekey">Bigger and darker = firmer:
+        <span class="sizes" aria-hidden="true"><b class="sq s-on l0"></b><b class="sq s-on l1"></b><b class="sq s-on l2"></b><b class="sq s-on l3"></b></span>
+        smallest with an amber ring = next game flips it</span>
     </div>
     <div class="board" id="board"></div>
     <p class="label" id="pointsNote" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.85rem">
-      Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. Tap a name to see every pick.
+      Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. "At stake" counts projected points riding on swing teams. Tap a name to see every pick.
     </p>
   </section>
 
@@ -184,12 +227,12 @@ footer { color: var(--muted); font-size: .85rem; }
       <label class="label" for="conf">Conference</label>
       <select id="conf"><option value="">All</option><option>East</option><option>West</option></select>
       <label class="label" for="sort">Sort</label>
-      <select id="sort"><option value="record">Record</option><option value="gap">Pace vs line</option><option value="name">Team</option></select>
+      <select id="sort"><option value="record">Record</option><option value="flip">Closest to flipping</option><option value="gap">Pace vs line</option><option value="name">Team</option></select>
     </div>
     <div class="scroll"><table>
       <thead><tr>
         <th class="label">Team</th><th class="label r">W-L</th><th class="label r">Line</th><th class="label r">Pace</th>
-        <th class="label">Pace vs line (0–<span class="gpt">82</span> wins)</th><th class="label">Status</th><th class="label">Clinch in</th><th class="label">Pool split</th>
+        <th class="label">Pace vs line (0–<span class="gpt">82</span> wins)</th><th class="label">Status</th><th class="label">Flips after</th><th class="label">Clinch in</th><th class="label">Pool split</th>
       </tr></thead>
       <tbody id="teams"></tbody>
     </table></div>
@@ -252,7 +295,47 @@ footer { color: var(--muted); font-size: .85rem; }
     $("banner").hidden = !notes.length;
   }
 
+  const SQ_STATE = { won: "s-won", lost: "s-lost", on_pace: "s-on", off_pace: "s-off", even: "s-even", push: "s-push", none: "s-none" };
+  // 4 = settled or no way to flip; 3 = 8+ results to flip; 2 = 4-7; 1 = 2-3; 0 = next game flips it
+  function firmness(t) {
+    if (t.result || !t.flip_after) return t.result ? 4 : (t.gp ? 4 : 1);
+    return t.flip_after === 1 ? 0 : t.flip_after <= 3 ? 1 : t.flip_after <= 7 ? 2 : 3;
+  }
+
+  function flipText(t) {
+    if (!t.flip_after) return "";
+    if (t.flip_on === "either") return "dead even with the line";
+    if (t.flip_after === 1) return `next ${t.flip_on} flips it`;
+    return `flips after ${t.flip_after} straight ${t.flip_on === "loss" ? "losses" : "wins"}`;
+  }
+
+  let swingOpen = null;
+  function swingBar() {
+    const bar = $("swingbar");
+    const swing = data.teams.filter((t) => t.swing).sort((a, b) => a.name.localeCompare(b.name));
+    bar.hidden = !swing.length;
+    if (!swing.length) return;
+    const nick = (t) => t.name.split(" ").slice(-1)[0].replace("Blazers", "Trail Blazers");
+    const chips = swing.map((t) => `<button class="swingchip" data-t="${t.abbr}" aria-expanded="${swingOpen === t.abbr}">
+        <b>${esc(nick(t))}</b><small>${t.flip_on === "either" ? "dead even" : `next ${t.flip_on} flips`}</small></button>`).join("");
+    let detail = "";
+    const t = swing.find((x) => x.abbr === swingOpen);
+    if (t) {
+      const side = (s) => data.players.filter((p) => p.picks[t.abbr] && p.picks[t.abbr].pick === s).map((p) => esc(p.name) + (p.picks[t.abbr].lock ? " (lock)" : ""));
+      const over = side("over"), under = side("under");
+      const lean = t.lean === "over" ? "over" : t.lean === "under" ? "under" : "neither side";
+      detail = `<div class="swingdetail"><span>${esc(t.name)} are ${t.w}-${t.l}, on pace for ${t.proj} against a ${t.line} line, so they're trending ${lean}. ${t.flip_on === "either" ? "Their next result decides it." : `A ${t.flip_on} next game flips them to the ${t.lean === "over" ? "under" : "over"}.`}</span>
+        ${data.players.length ? `<span class="side"><b>Over:</b> ${over.join(", ") || "nobody"}</span><span class="side"><b>Under:</b> ${under.join(", ") || "nobody"}</span>` : ""}</div>`;
+    }
+    bar.innerHTML = `<div class="head"><b>\u2195 On the edge</b><span>${swing.length === 1 ? "This team's" : "These teams'"} next game decides which side of the line ${swing.length === 1 ? "it's" : "they're"} on. Tap one to see who's riding it.</span></div>
+      <div class="swingchips">${chips}</div>${detail}`;
+    bar.querySelectorAll(".swingchip").forEach((b) => b.addEventListener("click", () => {
+      swingOpen = swingOpen === b.dataset.t ? null : b.dataset.t; swingBar();
+    }));
+  }
+
   function board() {
+    swingBar();
     const teams = Object.fromEntries(data.teams.map((t) => [t.abbr, t]));
     const order = data.teams.map((t) => t.abbr).sort();
     if (data.hidden) {
@@ -271,16 +354,20 @@ footer { color: var(--muted); font-size: .85rem; }
     let html = `<div class="row head"><span class="label">#</span><span class="label">Player</span>
       <span class="label stat hide-sm">Won</span><span class="label stat hide-sm">Lost</span><span class="label stat">Pts</span><span class="label stat">Proj.</span></div>`;
     data.players.forEach((p, i) => {
-      const strip = order.map((a) => `<i class="${p.picks[a].state}${p.picks[a].lock ? " lk" : ""}" title="${a}: ${STATE_LABEL[p.picks[a].state]}${p.picks[a].lock ? " (lock)" : ""}"></i>`).join("");
+      const strip = order.map((a) => {
+        const pk = p.picks[a], t = teams[a], how = flipText(t);
+        return `<i class="${pk.lock ? "lk" : ""}" title="${a}: ${STATE_LABEL[pk.state]}${pk.lock ? " (lock)" : ""}${pk.pick && how ? ` \u2014 ${how}` : ""}"><b class="sq ${SQ_STATE[pk.state] || "s-none"} l${firmness(t)}"></b></i>`;
+      }).join("");
+      const stake = p.at_stake ? `<span class="stake" title="Tonight's swing games could move this player's projection anywhere from ${p.proj_low} to ${p.proj_high}">\u2195 ${p.at_stake} at stake</span>` : "";
       const picks = order.map((a) => {
         const t = teams[a], pk = p.picks[a];
         const pick = pk.pick ? pk.pick[0].toUpperCase() + pk.pick.slice(1) : "—";
-        return `<div class="pk${pk.lock ? " lk" : ""}"><b>${a}</b><span>${pick} ${t.line ?? "—"}${pk.lock ? ' <span class="lock">Lock \u00d72</span>' : ""}<br><span class="res num">${t.w}-${t.l}${t.proj != null ? ` \u00b7 pace ${t.proj}` : ""}</span></span>
+        return `<div class="pk${pk.lock ? " lk" : ""}${pk.swing ? " swing" : ""}"><b>${a}</b><span>${pick} ${t.line ?? "—"}${pk.lock ? ' <span class="lock">Lock \u00d72</span>' : ""}<br><span class="res num">${t.w}-${t.l}${t.proj != null ? ` \u00b7 pace ${t.proj}` : ""}</span>${pk.pick && flipText(t) ? `<br><span class="res${pk.swing ? " flip" : ""}">${pk.swing ? "\u2195 " : ""}${esc(flipText(t))}</span>` : ""}</span>
           <span class="tag ${pk.state}">${STATE_LABEL[pk.state]}</span></div>`;
       }).join("");
       html += `<div class="row" tabindex="0" role="button" aria-expanded="false" id="p${i}">
         <span class="rank num">${p.rank}</span>
-        <div class="who"><span class="name">${esc(p.name)}</span><div class="strip" aria-hidden="true">${strip}</div></div>
+        <div class="who"><span class="nameline"><span class="name">${esc(p.name)}</span>${stake}</span><div class="strip" aria-hidden="true">${strip}</div></div>
         <span class="stat num hide-sm">${p.won}</span><span class="stat num hide-sm">${p.lost}</span>
         <span class="stat num">${p.points}</span><span class="stat proj num">${p.projected}</span>
         <div class="detail" hidden><div class="picks">${picks}</div></div></div>`;
@@ -305,6 +392,7 @@ footer { color: var(--muted); font-size: .85rem; }
     let rows = data.teams.filter((t) => !conf || t.conf === conf);
     if (sort === "gap") rows = [...rows].sort((a, b) => ((b.proj ?? 0) - (b.line ?? 0)) - ((a.proj ?? 0) - (a.line ?? 0)));
     if (sort === "name") rows = [...rows].sort((a, b) => a.name.localeCompare(b.name));
+    if (sort === "flip") rows = [...rows].sort((a, b) => (a.flip_after ?? 999) - (b.flip_after ?? 999) || a.name.localeCompare(b.name));
     const pct = (v) => `${Math.max(0, Math.min(100, (v / n) * 100))}%`;
     $("teams").innerHTML = rows.map((t) => {
       let status = '<span class="chip lean">No games</span>';
@@ -312,17 +400,19 @@ footer { color: var(--muted); font-size: .85rem; }
       else if (t.result === "under") status = '<span class="chip under-set">Under hit</span>';
       else if (t.result === "push") status = '<span class="chip lean">Push</span>';
       else if (t.lean) status = `<span class="chip lean">Trending ${t.lean === "even" ? "even" : t.lean}</span>`;
+      if (t.swing) status += ` <span class="chip swing" title="${esc(flipText(t))}">\u2195 Swing</span>`;
+      const flip = !t.flip_after ? "—" : t.flip_on === "either" ? "Next game" : t.flip_after === 1 ? `Next ${t.flip_on}` : `${t.flip_after} ${t.flip_on === "loss" ? "losses" : "wins"}`;
       const color = t.proj == null || t.line == null ? "var(--even)" : t.proj > t.line ? "var(--won)" : t.proj < t.line ? "var(--lost)" : "var(--even)";
       const track = t.line == null ? "" : `<div class="track" title="Line ${t.line}${t.proj != null ? `, pace ${t.proj}` : ""}">
           <div class="base"></div>
           ${t.proj != null ? `<div class="span" style="left:${pct(Math.min(t.line, t.proj))};width:${Math.abs(t.proj - t.line) / n * 100}%;background:${color}"></div>` : ""}
           <div class="ln" style="left:${pct(t.line)}"></div>
-          ${t.proj != null ? `<div class="dot" style="left:${pct(t.proj)};background:${color}"></div>` : ""}</div>`;
+          ${t.proj != null ? `<div class="dot${t.swing ? " swing" : ""}" style="left:${pct(t.proj)};background:${color}"></div>` : ""}</div>`;
       const tot = (t.picked_over ?? 0) + (t.picked_under ?? 0);
       const split = tot ? `<span class="split"><span class="num">${t.picked_over} O</span><span class="bar"><i style="width:${t.picked_over / tot * 100}%"></i></span><span class="num">${t.picked_under} U</span></span>` : (data.hidden ? "Hidden" : "—");
       return `<tr><td class="team"><b>${t.abbr}</b><span>${esc(t.name)}</span></td>
         <td class="r num">${t.w}-${t.l}</td><td class="r num">${t.line ?? "—"}</td><td class="r num">${t.proj ?? "—"}</td>
-        <td class="pace">${track}</td><td>${status}</td><td>${clinch(t, n)}</td><td>${split}</td></tr>`;
+        <td class="pace">${track}</td><td>${status}</td><td class="flipcell${t.swing ? " swing" : ""}">${flip}</td><td>${clinch(t, n)}</td><td>${split}</td></tr>`;
     }).join("");
   }
 
