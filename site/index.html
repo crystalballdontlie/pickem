@@ -87,7 +87,7 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .sizes .sq { width: calc(13px * var(--s)); }
 .legend .sq { width: 12px; }
 .sizekey { flex-basis: 100%; }
-.stake { font: 600 .82rem var(--body); color: var(--swing); white-space: nowrap; }
+.stake { font: 600 .82rem var(--body); color: var(--swing); min-width: 0; overflow-wrap: anywhere; }
 .who .nameline { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
 .pk.swing { box-shadow: inset 3px 0 0 var(--swing); }
 .pk .flip { color: var(--swing); font-weight: 600; }
@@ -218,7 +218,7 @@ footer { color: var(--muted); font-size: .85rem; }
     </div>
     <div class="board" id="board"></div>
     <p class="label" id="pointsNote" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--body); font-size:.85rem">
-      Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. "At stake" counts projected points riding on swing teams. Tap a name to see every pick.
+      Points: 1 for each correct pick, 2 for a correct lock. Projected adds the open picks where the team's current pace is on your side of the line. "Close to flipping" counts your picks on teams whose next game could flip them to the other side of the line: ones that could turn against you, and ones that could turn your way. Tap a name to see every pick.
     </p>
   </section>
 
@@ -358,7 +358,10 @@ footer { color: var(--muted); font-size: .85rem; }
         const pk = p.picks[a], t = teams[a], how = flipText(t);
         return `<i class="${pk.lock ? "lk" : ""}" title="${a}: ${STATE_LABEL[pk.state]}${pk.lock ? " (lock)" : ""}${pk.pick && how ? ` \u2014 ${how}` : ""}"><b class="sq ${SQ_STATE[pk.state] || "s-none"} l${firmness(t)}"></b></i>`;
       }).join("");
-      const stake = p.at_stake ? `<span class="stake" title="Tonight's swing games could move this player's projection anywhere from ${p.proj_low} to ${p.proj_high}">\u2195 ${p.at_stake} at stake</span>` : "";
+      const against = order.filter((a) => p.picks[a].swing && p.picks[a].state === "on_pace").length;
+      const toward = order.filter((a) => p.picks[a].swing && p.picks[a].state !== "on_pace").length;
+      const parts = [against ? `${against} against you` : "", toward ? `${toward} your way` : ""].filter(Boolean).join(" \u00b7 ");
+      const stake = parts ? `<span class="stake" title="Picks on teams whose next game could flip them to the other side of the line. Tonight's results could move this projection anywhere from ${p.proj_low} to ${p.proj_high}.">\u2195 Close to flipping: ${parts}</span>` : "";
       const picks = order.map((a) => {
         const t = teams[a], pk = p.picks[a];
         const pick = pk.pick ? pk.pick[0].toUpperCase() + pk.pick.slice(1) : "—";
