@@ -4,7 +4,7 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-23T21:15:04+00:00",
+ "generated_at": "2026-11-23T22:53:09+00:00",
  "last_game_date": "2026-11-22",
  "games_played_total": 248,
  "check": {
@@ -25,6 +25,9 @@
    "proj": 67.5,
    "result": null,
    "lean": "over",
+   "flip_after": 9,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 3,
    "picked_under": 6
   },
@@ -40,6 +43,9 @@
    "proj": 67.5,
    "result": null,
    "lean": "over",
+   "flip_after": 6,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -55,6 +61,9 @@
    "proj": 67.5,
    "result": null,
    "lean": "over",
+   "flip_after": 2,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -70,6 +79,9 @@
    "proj": 57.9,
    "result": null,
    "lean": "over",
+   "flip_after": 4,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -85,6 +97,9 @@
    "proj": 57.9,
    "result": null,
    "lean": "over",
+   "flip_after": 17,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -100,6 +115,9 @@
    "proj": 57.9,
    "result": null,
    "lean": "over",
+   "flip_after": 4,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -115,6 +133,9 @@
    "proj": 54.7,
    "result": null,
    "lean": "over",
+   "flip_after": 2,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -130,6 +151,9 @@
    "proj": 53.1,
    "result": null,
    "lean": "over",
+   "flip_after": 4,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -145,6 +169,9 @@
    "proj": 53.1,
    "result": null,
    "lean": "over",
+   "flip_after": 1,
+   "flip_on": "loss",
+   "swing": true,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -160,6 +187,9 @@
    "proj": 53.1,
    "result": null,
    "lean": "over",
+   "flip_after": 1,
+   "flip_on": "loss",
+   "swing": true,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -175,6 +205,9 @@
    "proj": 51.2,
    "result": null,
    "lean": "over",
+   "flip_after": 1,
+   "flip_on": "loss",
+   "swing": true,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -190,6 +223,9 @@
    "proj": 51.2,
    "result": null,
    "lean": "over",
+   "flip_after": 3,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -205,6 +241,9 @@
    "proj": 51.2,
    "result": null,
    "lean": "over",
+   "flip_after": 5,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -220,6 +259,9 @@
    "proj": 48.2,
    "result": null,
    "lean": "over",
+   "flip_after": 8,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -235,6 +277,9 @@
    "proj": 48.2,
    "result": null,
    "lean": "under",
+   "flip_after": 13,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -250,6 +295,9 @@
    "proj": 43.7,
    "result": null,
    "lean": "over",
+   "flip_after": 2,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 3,
    "picked_under": 6
   },
@@ -265,6 +313,9 @@
    "proj": 43.4,
    "result": null,
    "lean": "under",
+   "flip_after": 3,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 8,
    "picked_under": 1
   },
@@ -280,6 +331,9 @@
    "proj": 43.4,
    "result": null,
    "lean": "over",
+   "flip_after": 4,
+   "flip_on": "loss",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -295,6 +349,9 @@
    "proj": 35.9,
    "result": null,
    "lean": "under",
+   "flip_after": 4,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -310,6 +367,9 @@
    "proj": 31.9,
    "result": null,
    "lean": "under",
+   "flip_after": 1,
+   "flip_on": "win",
+   "swing": true,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -325,6 +385,9 @@
    "proj": 30.8,
    "result": null,
    "lean": "under",
+   "flip_after": 8,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -340,6 +403,9 @@
    "proj": 24.1,
    "result": null,
    "lean": "under",
+   "flip_after": 10,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 7,
    "picked_under": 2
   },
@@ -355,6 +421,9 @@
    "proj": 22.8,
    "result": null,
    "lean": "under",
+   "flip_after": 2,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -370,6 +439,9 @@
    "proj": 21.9,
    "result": null,
    "lean": "under",
+   "flip_after": 6,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 5,
    "picked_under": 4
   },
@@ -385,6 +457,9 @@
    "proj": 21.9,
    "result": null,
    "lean": "under",
+   "flip_after": 2,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -400,6 +475,9 @@
    "proj": 20.5,
    "result": null,
    "lean": "under",
+   "flip_after": 3,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 3,
    "picked_under": 6
   },
@@ -415,6 +493,9 @@
    "proj": 16.4,
    "result": null,
    "lean": "under",
+   "flip_after": 3,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 2,
    "picked_under": 7
   },
@@ -430,6 +511,9 @@
    "proj": 13.7,
    "result": null,
    "lean": "under",
+   "flip_after": 10,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -445,6 +529,9 @@
    "proj": 10.2,
    "result": null,
    "lean": "under",
+   "flip_after": 3,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 3,
    "picked_under": 6
   },
@@ -460,6 +547,9 @@
    "proj": 4.8,
    "result": null,
    "lean": "under",
+   "flip_after": 7,
+   "flip_on": "win",
+   "swing": false,
    "picked_over": 2,
    "picked_under": 7
   }
@@ -471,152 +561,182 @@
     "ATL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": true
     },
     "GSW": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": true
     },
     "OKC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -630,6 +750,9 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
+   "at_stake": 6,
+   "proj_low": 17,
+   "proj_high": 23,
    "rank": 1
   },
   {
@@ -638,152 +761,182 @@
     "ATL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "MEM": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "SAS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -797,6 +950,9 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
+   "at_stake": 5,
+   "proj_low": 17,
+   "proj_high": 22,
    "rank": 1
   },
   {
@@ -805,152 +961,182 @@
     "ATL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "DEN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -964,6 +1150,9 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
+   "at_stake": 4,
+   "proj_low": 18,
+   "proj_high": 22,
    "rank": 3
   },
   {
@@ -972,152 +1161,182 @@
     "ATL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "CHA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "MIN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "SAS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -1131,6 +1350,9 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
+   "at_stake": 4,
+   "proj_low": 16,
+   "proj_high": 20,
    "rank": 3
   },
   {
@@ -1139,152 +1361,182 @@
     "ATL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "HOU": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -1298,6 +1550,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 17,
+   "at_stake": 4,
+   "proj_low": 16,
+   "proj_high": 20,
    "rank": 5
   },
   {
@@ -1306,152 +1561,182 @@
     "ATL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "under",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "over",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": true
     }
    },
    "locks": [
@@ -1465,6 +1750,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 16,
+   "at_stake": 5,
+   "proj_low": 14,
+   "proj_high": 19,
    "rank": 6
   },
   {
@@ -1473,152 +1761,182 @@
     "ATL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "BOS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "PHI": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -1632,6 +1950,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 15,
+   "at_stake": 4,
+   "proj_low": 12,
+   "proj_high": 16,
    "rank": 7
   },
   {
@@ -1640,152 +1961,182 @@
     "ATL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "HOU": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "NOP": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "under",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": true
     },
     "OKC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "PHX": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -1799,6 +2150,9 @@
    "on_pace": 13,
    "points": 0,
    "projected": 14,
+   "at_stake": 5,
+   "proj_low": 14,
+   "proj_high": 19,
    "rank": 8
   },
   {
@@ -1807,152 +2161,182 @@
     "ATL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "BOS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "BKN": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CHI": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "CLE": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DAL": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DEN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "DET": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "GSW": {
      "pick": "over",
      "state": "on_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "HOU": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "IND": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "LAL": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MEM": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIA": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "MIL": {
      "pick": "over",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "MIN": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NOP": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "NYK": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     },
     "OKC": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "ORL": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHI": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "PHX": {
      "pick": "over",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "POR": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "SAC": {
      "pick": "over",
      "state": "off_pace",
-     "lock": true
+     "lock": true,
+     "swing": false
     },
     "SAS": {
      "pick": "under",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "TOR": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "UTA": {
      "pick": "over",
      "state": "off_pace",
-     "lock": false
+     "lock": false,
+     "swing": false
     },
     "WAS": {
      "pick": "under",
      "state": "on_pace",
-     "lock": false
+     "lock": false,
+     "swing": true
     }
    },
    "locks": [
@@ -1966,6 +2350,9 @@
    "on_pace": 12,
    "points": 0,
    "projected": 13,
+   "at_stake": 4,
+   "proj_low": 10,
+   "proj_high": 14,
    "rank": 9
   }
  ],
