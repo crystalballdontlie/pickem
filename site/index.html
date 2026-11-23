@@ -388,7 +388,8 @@ footer { color: var(--muted); font-size: .85rem; }
       }).join("");
       const against = order.filter((a) => p.picks[a].swing && p.picks[a].state === "on_pace").length;
       const toward = order.filter((a) => p.picks[a].swing && p.picks[a].state !== "on_pace").length;
-      const parts = [against ? `${against} against you` : "", toward ? `${toward} your way` : ""].filter(Boolean).join(" \u00b7 ");
+      // Always show both counts (including 0) whenever any team is on the edge.
+      const parts = data.teams.some((t) => t.swing) ? `${against} against you \u00b7 ${toward} your way` : "";
       const stake = parts ? `<span class="stake" title="Picks on teams whose next game could flip them to the other side of the line. Tonight's results could move this projection anywhere from ${p.proj_low} to ${p.proj_high}.">\u2195 Close to flipping: ${parts}</span>` : "";
       const picks = order.map((a) => {
         const t = teams[a], pk = p.picks[a];
