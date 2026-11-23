@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy_try1.outputs.page_url || steps.deploy_try2.outputs.page_url || steps.deploy_try3.outputs.page_url }}
     steps:
       - name: When
         id: when
@@ -118,6 +118,26 @@ jobs:
         with:
           path: site
 
-      - id: deploy
+      # Publishing sometimes fails with "No artifacts named github-pages were found"
+      # when GitHub is slow to register the upload. Wait and try again, twice.
+      - id: deploy_try1
         if: steps.when.outputs.run == 'true'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before retrying publish
+        if: steps.when.outputs.run == 'true' && steps.deploy_try1.outcome == 'failure'
+        run: sleep 45
+
+      - id: deploy_try2
+        if: steps.when.outputs.run == 'true' && steps.deploy_try1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before last publish attempt
+        if: steps.when.outputs.run == 'true' && steps.deploy_try2.outcome == 'failure'
+        run: sleep 90
+
+      - id: deploy_try3
+        if: steps.when.outputs.run == 'true' && steps.deploy_try2.outcome == 'failure'
         uses: actions/deploy-pages@v4
