@@ -79,13 +79,17 @@ nav button:focus-visible, .row:focus-visible, select:focus-visible { outline: 2p
 .sq.s-on { --c: color-mix(in srgb, var(--won) var(--p), var(--surface)); }
 .sq.s-off { --c: color-mix(in srgb, var(--lost) var(--p), var(--surface)); }
 .sq.l0 { --p: 30%; } .sq.l1 { --p: 45%; } .sq.l2 { --p: 62%; } .sq.l3 { --p: 80%; }
-.sq.s-won { --c: var(--won); } .sq.s-lost { --c: var(--lost); }
+/* Settled picks: a check or an X instead of a square */
+.sq.s-won, .sq.s-lost { background: none; width: 100%; display: grid; place-items: center; font: 800 13px/1 var(--body); }
+.sq.s-won { color: var(--won); } .sq.s-won::before { content: "\2713"; }
+.sq.s-lost { color: var(--lost); } .sq.s-lost::before { content: "\2717"; }
 .sq.s-even, .sq.s-push { --c: var(--even); }
 .sq.s-none { --c: transparent; box-shadow: inset 0 0 0 1px var(--line); }
 .sq.l0:not(.s-none) { box-shadow: 0 0 0 1.5px var(--swing); }
 .sizes { display: inline-flex; align-items: center; gap: 4px; }
 .sizes .sq { width: calc(13px * var(--s)); }
 .legend .sq { width: 12px; }
+.legend .sq.s-won, .legend .sq.s-lost { width: 14px; font-size: 14px; }
 .sizekey { flex-basis: 100%; }
 .stake { font: 600 .82rem var(--body); color: var(--swing); min-width: 0; overflow-wrap: anywhere; }
 .who .nameline { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
