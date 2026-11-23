@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<script>
+  try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <style>
 /* Layout: scoreboard header, then a leaderboard where each person's 30 picks read as a strip of lights, then the team board with pace-vs-line bars. */
 :root {
@@ -40,6 +43,11 @@ header { display: grid; gap: 14px; }
 .eyebrow { color: var(--accent); }
 .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: baseline; color: var(--muted); }
 .meta b { color: var(--ink); font-weight: 600; }
+header .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.theme { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--surface); flex: none; }
+.theme button { font: 600 .8rem var(--body); border: 0; background: none; color: var(--muted); padding: 4px 10px; cursor: pointer; }
+.theme button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.theme button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: .85rem; border: 1px solid var(--line); background: var(--surface); }
 .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--even); }
 .pill.match::before { background: var(--won); }
@@ -190,7 +198,12 @@ footer { color: var(--muted); font-size: .85rem; }
 <body>
 <div class="wrap">
   <header>
-    <div class="label eyebrow" id="season">NBA season</div>
+    <div class="top">
+      <div class="label eyebrow" id="season">NBA season</div>
+      <div class="theme" role="group" aria-label="Color theme">
+        <button data-theme="auto" title="Match this device's setting">Auto</button><button data-theme="light">Light</button><button data-theme="dark">Dark</button>
+      </div>
+    </div>
     <h1 id="poolName">Over/Under Pool</h1>
     <div class="meta">
       <span>Updated <b id="updated">—</b></span>
@@ -253,6 +266,17 @@ footer { color: var(--muted); font-size: .85rem; }
 </div>
 
 <script>
+  (function themeToggle() {
+    const root = document.documentElement;
+    const set = (t) => {
+      if (t === "auto") delete root.dataset.theme; else root.dataset.theme = t;
+      try { t === "auto" ? localStorage.removeItem("theme") : localStorage.setItem("theme", t); } catch (e) {}
+      document.querySelectorAll(".theme button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.theme === t)));
+    };
+    document.querySelectorAll(".theme button").forEach((b) => b.addEventListener("click", () => set(b.dataset.theme)));
+    set(root.dataset.theme || "auto");
+  })();
+
 (() => {
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
