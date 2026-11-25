@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-25T02:07:56+00:00",
- "last_game_date": "2026-11-23",
- "games_played_total": 258,
+ "generated_at": "2026-11-25T04:14:10+00:00",
+ "last_game_date": "2026-11-24",
+ "games_played_total": 260,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -140,6 +140,24 @@
    "picked_under": 4
   },
   {
+   "abbr": "BOS",
+   "name": "Boston Celtics",
+   "conf": "East",
+   "w": 12,
+   "l": 6,
+   "line": 51.5,
+   "gp": 18,
+   "remaining": 64,
+   "proj": 54.7,
+   "result": null,
+   "lean": "over",
+   "flip_after": 2,
+   "flip_on": "loss",
+   "swing": false,
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
    "abbr": "ATL",
    "name": "Atlanta Hawks",
    "conf": "East",
@@ -158,22 +176,22 @@
    "picked_under": 4
   },
   {
-   "abbr": "BOS",
-   "name": "Boston Celtics",
+   "abbr": "DET",
+   "name": "Detroit Pistons",
    "conf": "East",
    "w": 11,
    "l": 6,
-   "line": 51.5,
+   "line": 48.5,
    "gp": 17,
    "remaining": 65,
    "proj": 53.1,
    "result": null,
    "lean": "over",
-   "flip_after": 1,
+   "flip_after": 2,
    "flip_on": "loss",
-   "swing": true,
-   "picked_over": 5,
-   "picked_under": 4
+   "swing": false,
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "NYK",
@@ -210,24 +228,6 @@
    "swing": false,
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "DET",
-   "name": "Detroit Pistons",
-   "conf": "East",
-   "w": 10,
-   "l": 6,
-   "line": 48.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 51.2,
-   "result": null,
-   "lean": "over",
-   "flip_after": 1,
-   "flip_on": "loss",
-   "swing": true,
-   "picked_over": 6,
-   "picked_under": 3
   },
   {
    "abbr": "MIA",
@@ -342,14 +342,14 @@
    "name": "Orlando Magic",
    "conf": "East",
    "w": 7,
-   "l": 9,
+   "l": 10,
    "line": 43.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 35.9,
+   "gp": 17,
+   "remaining": 65,
+   "proj": 33.8,
    "result": null,
    "lean": "under",
-   "flip_after": 4,
+   "flip_after": 5,
    "flip_on": "win",
    "swing": false,
    "picked_over": 6,
@@ -360,16 +360,16 @@
    "name": "Washington Wizards",
    "conf": "East",
    "w": 7,
-   "l": 11,
+   "l": 12,
    "line": 34.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 31.9,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 30.2,
    "result": null,
    "lean": "under",
-   "flip_after": 1,
+   "flip_after": 2,
    "flip_on": "win",
-   "swing": true,
+   "swing": false,
    "picked_over": 4,
    "picked_under": 5
   },
@@ -568,7 +568,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -610,7 +610,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": true,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "under",
@@ -736,7 +736,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -750,9 +750,9 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 6,
-   "proj_low": 17,
-   "proj_high": 23,
+   "at_stake": 2,
+   "proj_low": 20,
+   "proj_high": 22,
    "rank": 1
   },
   {
@@ -768,7 +768,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -810,7 +810,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": true,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -936,7 +936,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -950,8 +950,8 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 5,
-   "proj_low": 17,
+   "at_stake": 1,
+   "proj_low": 21,
    "proj_high": 22,
    "rank": 1
   },
@@ -968,7 +968,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "over",
@@ -1010,7 +1010,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -1136,7 +1136,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -1150,9 +1150,9 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 4,
-   "proj_low": 18,
-   "proj_high": 22,
+   "at_stake": 1,
+   "proj_low": 20,
+   "proj_high": 21,
    "rank": 3
   },
   {
@@ -1168,7 +1168,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -1210,7 +1210,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "under",
@@ -1336,7 +1336,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -1350,8 +1350,8 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 4,
-   "proj_low": 16,
+   "at_stake": 1,
+   "proj_low": 19,
    "proj_high": 20,
    "rank": 3
   },
@@ -1368,7 +1368,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -1410,7 +1410,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -1536,7 +1536,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -1550,9 +1550,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 17,
-   "at_stake": 4,
+   "at_stake": 1,
    "proj_low": 16,
-   "proj_high": 20,
+   "proj_high": 17,
    "rank": 5
   },
   {
@@ -1568,7 +1568,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -1610,7 +1610,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -1736,7 +1736,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": true,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -1750,9 +1750,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 16,
-   "at_stake": 5,
-   "proj_low": 14,
-   "proj_high": 19,
+   "at_stake": 1,
+   "proj_low": 16,
+   "proj_high": 17,
    "rank": 6
   },
   {
@@ -1768,7 +1768,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -1810,7 +1810,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "under",
@@ -1936,7 +1936,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -1950,9 +1950,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 15,
-   "at_stake": 4,
-   "proj_low": 12,
-   "proj_high": 16,
+   "at_stake": 1,
+   "proj_low": 14,
+   "proj_high": 15,
    "rank": 7
   },
   {
@@ -1968,7 +1968,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "under",
@@ -2010,7 +2010,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -2136,7 +2136,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -2150,9 +2150,9 @@
    "on_pace": 13,
    "points": 0,
    "projected": 14,
-   "at_stake": 5,
+   "at_stake": 2,
    "proj_low": 14,
-   "proj_high": 19,
+   "proj_high": 16,
    "rank": 8
   },
   {
@@ -2168,7 +2168,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "BKN": {
      "pick": "over",
@@ -2210,7 +2210,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     },
     "GSW": {
      "pick": "over",
@@ -2336,7 +2336,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": true
+     "swing": false
     }
    },
    "locks": [
@@ -2350,9 +2350,9 @@
    "on_pace": 12,
    "points": 0,
    "projected": 13,
-   "at_stake": 4,
-   "proj_low": 10,
-   "proj_high": 14,
+   "at_stake": 1,
+   "proj_low": 12,
+   "proj_high": 13,
    "rank": 9
   }
  ],
