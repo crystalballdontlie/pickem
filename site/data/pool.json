@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-25T04:14:10+00:00",
+ "generated_at": "2026-11-25T06:11:00+00:00",
  "last_game_date": "2026-11-24",
- "games_played_total": 260,
+ "games_played_total": 261,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -122,24 +122,6 @@
    "picked_under": 4
   },
   {
-   "abbr": "DEN",
-   "name": "Denver Nuggets",
-   "conf": "West",
-   "w": 10,
-   "l": 5,
-   "line": 48.5,
-   "gp": 15,
-   "remaining": 67,
-   "proj": 54.7,
-   "result": null,
-   "lean": "over",
-   "flip_after": 2,
-   "flip_on": "loss",
-   "swing": false,
-   "picked_over": 5,
-   "picked_under": 4
-  },
-  {
    "abbr": "BOS",
    "name": "Boston Celtics",
    "conf": "East",
@@ -230,6 +212,24 @@
    "picked_under": 5
   },
   {
+   "abbr": "DEN",
+   "name": "Denver Nuggets",
+   "conf": "West",
+   "w": 10,
+   "l": 6,
+   "line": 48.5,
+   "gp": 16,
+   "remaining": 66,
+   "proj": 51.2,
+   "result": null,
+   "lean": "over",
+   "flip_after": 1,
+   "flip_on": "loss",
+   "swing": true,
+   "picked_over": 5,
+   "picked_under": 4
+  },
+  {
    "abbr": "MIA",
    "name": "Miami Heat",
    "conf": "East",
@@ -251,15 +251,15 @@
    "abbr": "DAL",
    "name": "Dallas Mavericks",
    "conf": "West",
-   "w": 10,
+   "w": 11,
    "l": 7,
    "line": 33.5,
-   "gp": 17,
-   "remaining": 65,
-   "proj": 48.2,
+   "gp": 18,
+   "remaining": 64,
+   "proj": 50.1,
    "result": null,
    "lean": "over",
-   "flip_after": 8,
+   "flip_after": 9,
    "flip_on": "loss",
    "swing": false,
    "picked_over": 6,
@@ -604,7 +604,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -750,9 +750,9 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 2,
+   "at_stake": 3,
    "proj_low": 20,
-   "proj_high": 22,
+   "proj_high": 23,
    "rank": 1
   },
   {
@@ -804,7 +804,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -950,8 +950,8 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 1,
-   "proj_low": 21,
+   "at_stake": 2,
+   "proj_low": 20,
    "proj_high": 22,
    "rank": 1
   },
@@ -1004,7 +1004,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "under",
@@ -1150,8 +1150,8 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 1,
-   "proj_low": 20,
+   "at_stake": 2,
+   "proj_low": 19,
    "proj_high": 21,
    "rank": 3
   },
@@ -1204,7 +1204,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -1350,8 +1350,8 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 1,
-   "proj_low": 19,
+   "at_stake": 2,
+   "proj_low": 18,
    "proj_high": 20,
    "rank": 3
   },
@@ -1404,7 +1404,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "under",
@@ -1550,9 +1550,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 17,
-   "at_stake": 1,
+   "at_stake": 2,
    "proj_low": 16,
-   "proj_high": 17,
+   "proj_high": 18,
    "rank": 5
   },
   {
@@ -1604,7 +1604,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -1750,8 +1750,8 @@
    "on_pace": 14,
    "points": 0,
    "projected": 16,
-   "at_stake": 1,
-   "proj_low": 16,
+   "at_stake": 2,
+   "proj_low": 15,
    "proj_high": 17,
    "rank": 6
   },
@@ -1804,7 +1804,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -1950,9 +1950,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 15,
-   "at_stake": 1,
+   "at_stake": 2,
    "proj_low": 14,
-   "proj_high": 15,
+   "proj_high": 16,
    "rank": 7
   },
   {
@@ -2004,7 +2004,7 @@
      "pick": "over",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "under",
@@ -2150,8 +2150,8 @@
    "on_pace": 13,
    "points": 0,
    "projected": 14,
-   "at_stake": 2,
-   "proj_low": 14,
+   "at_stake": 3,
+   "proj_low": 13,
    "proj_high": 16,
    "rank": 8
   },
@@ -2204,7 +2204,7 @@
      "pick": "under",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "DET": {
      "pick": "over",
@@ -2350,9 +2350,9 @@
    "on_pace": 12,
    "points": 0,
    "projected": 13,
-   "at_stake": 1,
+   "at_stake": 2,
    "proj_low": 12,
-   "proj_high": 13,
+   "proj_high": 14,
    "rank": 9
   }
  ],
