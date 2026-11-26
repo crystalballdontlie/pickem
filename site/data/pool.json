@@ -4,9 +4,9 @@
  "season": 2026,
  "season_label": "2026-27",
  "games_per_team": 82,
- "generated_at": "2026-11-26T02:07:59+00:00",
+ "generated_at": "2026-11-26T04:14:11+00:00",
  "last_game_date": "2026-11-25",
- "games_played_total": 262,
+ "games_played_total": 268,
  "check": {
   "status": "match",
   "mismatches": [],
@@ -71,15 +71,15 @@
    "abbr": "HOU",
    "name": "Houston Rockets",
    "conf": "West",
-   "w": 13,
+   "w": 14,
    "l": 5,
    "line": 48.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 59.2,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 60.4,
    "result": null,
    "lean": "over",
-   "flip_after": 4,
+   "flip_after": 5,
    "flip_on": "loss",
    "swing": false,
    "picked_over": 5,
@@ -89,15 +89,15 @@
    "abbr": "MEM",
    "name": "Memphis Grizzlies",
    "conf": "West",
-   "w": 13,
+   "w": 14,
    "l": 5,
    "line": 29.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 59.2,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 60.4,
    "result": null,
    "lean": "over",
-   "flip_after": 19,
+   "flip_after": 20,
    "flip_on": "loss",
    "swing": false,
    "picked_over": 4,
@@ -107,15 +107,15 @@
    "abbr": "MIN",
    "name": "Minnesota Timberwolves",
    "conf": "West",
-   "w": 13,
+   "w": 14,
    "l": 5,
    "line": 48.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 59.2,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 60.4,
    "result": null,
    "lean": "over",
-   "flip_after": 4,
+   "flip_after": 5,
    "flip_on": "loss",
    "swing": false,
    "picked_over": 5,
@@ -138,6 +138,24 @@
    "swing": false,
    "picked_over": 5,
    "picked_under": 4
+  },
+  {
+   "abbr": "NYK",
+   "name": "New York Knicks",
+   "conf": "East",
+   "w": 12,
+   "l": 6,
+   "line": 52.5,
+   "gp": 18,
+   "remaining": 64,
+   "proj": 54.7,
+   "result": null,
+   "lean": "over",
+   "flip_after": 1,
+   "flip_on": "loss",
+   "swing": true,
+   "picked_over": 6,
+   "picked_under": 3
   },
   {
    "abbr": "ATL",
@@ -172,24 +190,6 @@
    "flip_after": 2,
    "flip_on": "loss",
    "swing": false,
-   "picked_over": 6,
-   "picked_under": 3
-  },
-  {
-   "abbr": "NYK",
-   "name": "New York Knicks",
-   "conf": "East",
-   "w": 11,
-   "l": 6,
-   "line": 52.5,
-   "gp": 17,
-   "remaining": 65,
-   "proj": 53.1,
-   "result": null,
-   "lean": "over",
-   "flip_after": 1,
-   "flip_on": "loss",
-   "swing": true,
    "picked_over": 6,
    "picked_under": 3
   },
@@ -266,42 +266,6 @@
    "picked_under": 3
   },
   {
-   "abbr": "PHX",
-   "name": "Phoenix Suns",
-   "conf": "West",
-   "w": 9,
-   "l": 7,
-   "line": 39.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 46.1,
-   "result": null,
-   "lean": "over",
-   "flip_after": 3,
-   "flip_on": "loss",
-   "swing": false,
-   "picked_over": 3,
-   "picked_under": 6
-  },
-  {
-   "abbr": "OKC",
-   "name": "Oklahoma City Thunder",
-   "conf": "West",
-   "w": 10,
-   "l": 8,
-   "line": 62.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 45.6,
-   "result": null,
-   "lean": "under",
-   "flip_after": 16,
-   "flip_on": "win",
-   "swing": false,
-   "picked_over": 4,
-   "picked_under": 5
-  },
-  {
    "abbr": "GSW",
    "name": "Golden State Warriors",
    "conf": "West",
@@ -320,18 +284,54 @@
    "picked_under": 3
   },
   {
+   "abbr": "PHX",
+   "name": "Phoenix Suns",
+   "conf": "West",
+   "w": 9,
+   "l": 8,
+   "line": 39.5,
+   "gp": 17,
+   "remaining": 65,
+   "proj": 43.4,
+   "result": null,
+   "lean": "over",
+   "flip_after": 2,
+   "flip_on": "loss",
+   "swing": false,
+   "picked_over": 3,
+   "picked_under": 6
+  },
+  {
+   "abbr": "OKC",
+   "name": "Oklahoma City Thunder",
+   "conf": "West",
+   "w": 10,
+   "l": 9,
+   "line": 62.5,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 43.2,
+   "result": null,
+   "lean": "under",
+   "flip_after": 19,
+   "flip_on": "win",
+   "swing": false,
+   "picked_over": 4,
+   "picked_under": 5
+  },
+  {
    "abbr": "CLE",
    "name": "Cleveland Cavaliers",
    "conf": "East",
    "w": 9,
-   "l": 9,
+   "l": 10,
    "line": 47.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 41.0,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 38.8,
    "result": null,
    "lean": "under",
-   "flip_after": 4,
+   "flip_after": 5,
    "flip_on": "win",
    "swing": false,
    "picked_over": 8,
@@ -392,6 +392,24 @@
    "picked_under": 3
   },
   {
+   "abbr": "CHI",
+   "name": "Chicago Bulls",
+   "conf": "East",
+   "w": 6,
+   "l": 12,
+   "line": 29.5,
+   "gp": 18,
+   "remaining": 64,
+   "proj": 27.3,
+   "result": null,
+   "lean": "under",
+   "flip_after": 1,
+   "flip_on": "win",
+   "swing": true,
+   "picked_over": 3,
+   "picked_under": 6
+  },
+  {
    "abbr": "IND",
    "name": "Indiana Pacers",
    "conf": "East",
@@ -408,24 +426,6 @@
    "swing": false,
    "picked_over": 7,
    "picked_under": 2
-  },
-  {
-   "abbr": "CHI",
-   "name": "Chicago Bulls",
-   "conf": "East",
-   "w": 5,
-   "l": 12,
-   "line": 29.5,
-   "gp": 17,
-   "remaining": 65,
-   "proj": 24.1,
-   "result": null,
-   "lean": "under",
-   "flip_after": 2,
-   "flip_on": "win",
-   "swing": false,
-   "picked_over": 3,
-   "picked_under": 6
   },
   {
    "abbr": "NOP",
@@ -446,15 +446,33 @@
    "picked_under": 4
   },
   {
+   "abbr": "BKN",
+   "name": "Brooklyn Nets",
+   "conf": "East",
+   "w": 4,
+   "l": 13,
+   "line": 24.5,
+   "gp": 17,
+   "remaining": 65,
+   "proj": 19.3,
+   "result": null,
+   "lean": "under",
+   "flip_after": 2,
+   "flip_on": "win",
+   "swing": false,
+   "picked_over": 2,
+   "picked_under": 7
+  },
+  {
    "abbr": "CHA",
    "name": "Charlotte Hornets",
    "conf": "East",
    "w": 4,
-   "l": 12,
+   "l": 13,
    "line": 37.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 20.5,
+   "gp": 17,
+   "remaining": 65,
+   "proj": 19.3,
    "result": null,
    "lean": "under",
    "flip_after": 7,
@@ -468,11 +486,11 @@
    "name": "LA Clippers",
    "conf": "West",
    "w": 4,
-   "l": 12,
+   "l": 13,
    "line": 28.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 20.5,
+   "gp": 17,
+   "remaining": 65,
+   "proj": 19.3,
    "result": null,
    "lean": "under",
    "flip_after": 3,
@@ -480,24 +498,6 @@
    "swing": false,
    "picked_over": 4,
    "picked_under": 5
-  },
-  {
-   "abbr": "BKN",
-   "name": "Brooklyn Nets",
-   "conf": "East",
-   "w": 3,
-   "l": 13,
-   "line": 24.5,
-   "gp": 16,
-   "remaining": 66,
-   "proj": 15.4,
-   "result": null,
-   "lean": "under",
-   "flip_after": 3,
-   "flip_on": "win",
-   "swing": false,
-   "picked_over": 2,
-   "picked_under": 7
   },
   {
    "abbr": "UTA",
@@ -540,11 +540,11 @@
    "name": "Milwaukee Bucks",
    "conf": "East",
    "w": 2,
-   "l": 16,
+   "l": 17,
    "line": 25.5,
-   "gp": 18,
-   "remaining": 64,
-   "proj": 9.1,
+   "gp": 19,
+   "remaining": 63,
+   "proj": 8.6,
    "result": null,
    "lean": "under",
    "flip_after": 6,
@@ -586,7 +586,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -750,9 +750,9 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 3,
+   "at_stake": 4,
    "proj_low": 20,
-   "proj_high": 23,
+   "proj_high": 24,
    "rank": 1
   },
   {
@@ -786,7 +786,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -950,8 +950,8 @@
    "on_pace": 19,
    "points": 0,
    "projected": 22,
-   "at_stake": 2,
-   "proj_low": 20,
+   "at_stake": 3,
+   "proj_low": 19,
    "proj_high": 22,
    "rank": 1
   },
@@ -986,7 +986,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": true,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -1150,8 +1150,8 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 2,
-   "proj_low": 19,
+   "at_stake": 4,
+   "proj_low": 17,
    "proj_high": 21,
    "rank": 3
   },
@@ -1186,7 +1186,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -1350,8 +1350,8 @@
    "on_pace": 17,
    "points": 0,
    "projected": 20,
-   "at_stake": 2,
-   "proj_low": 18,
+   "at_stake": 3,
+   "proj_low": 17,
    "proj_high": 20,
    "rank": 3
   },
@@ -1386,7 +1386,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -1550,9 +1550,9 @@
    "on_pace": 14,
    "points": 0,
    "projected": 17,
-   "at_stake": 2,
+   "at_stake": 3,
    "proj_low": 16,
-   "proj_high": 18,
+   "proj_high": 19,
    "rank": 5
   },
   {
@@ -1586,7 +1586,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -1750,8 +1750,8 @@
    "on_pace": 14,
    "points": 0,
    "projected": 16,
-   "at_stake": 2,
-   "proj_low": 15,
+   "at_stake": 3,
+   "proj_low": 14,
    "proj_high": 17,
    "rank": 6
   },
@@ -1786,7 +1786,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -1950,8 +1950,8 @@
    "on_pace": 14,
    "points": 0,
    "projected": 15,
-   "at_stake": 2,
-   "proj_low": 14,
+   "at_stake": 3,
+   "proj_low": 13,
    "proj_high": 16,
    "rank": 7
   },
@@ -1986,7 +1986,7 @@
      "pick": "over",
      "state": "off_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "over",
@@ -2150,9 +2150,9 @@
    "on_pace": 13,
    "points": 0,
    "projected": 14,
-   "at_stake": 3,
+   "at_stake": 4,
    "proj_low": 13,
-   "proj_high": 16,
+   "proj_high": 17,
    "rank": 8
   },
   {
@@ -2186,7 +2186,7 @@
      "pick": "under",
      "state": "on_pace",
      "lock": false,
-     "swing": false
+     "swing": true
     },
     "CLE": {
      "pick": "under",
@@ -2350,8 +2350,8 @@
    "on_pace": 12,
    "points": 0,
    "projected": 13,
-   "at_stake": 2,
-   "proj_low": 12,
+   "at_stake": 3,
+   "proj_low": 11,
    "proj_high": 14,
    "rank": 9
   }
@@ -2446,7 +2446,7 @@
       "Jason"
      ],
      "winner": false,
-     "status": "13 wins"
+     "status": "14 wins"
     }
    ]
   },
